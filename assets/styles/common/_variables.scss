@@ -1,3 +1,38 @@
+// Glyphicons font path
+$icon-font-path:        "../fonts/";
+
 // Grid settings
 $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
+
+// UCLA Colors
+$ucla-blue:             #3284BF; // UCLA Blue
+$ucla-gold:             #FFE800; // UCLA Gold
+$dark-blue:             #1E4B87; // Secondary Palette, Dark Blue
+$light-blue:            #00A5E5; // Secondary Palette, Light Blue
+$gray:                  #666666; // Tertiary Palette, Gray
+
+
+// Theme Specific Colors
+$brand-primary:         #013c6f; // dark blue header/footer background
+$darker-blue:           #00284a; // used for sub page header backgrounds
+$dark-gray:             #363636; // gray content section background
+$white:                 #FFFFFF;
+$link-inline:           #9edeff; // gray content link color
+$link-active:           #FFE800; // UCLA Gold
+
+// UCLA Brand Fonts
+$sans-serif: 'Proxima Nova Regular', 'Helvetica Neue', Helvetia, Arial, sans-serif;
+$italic-sans-serif: 'Proxima Nova Regular Italic', 'Helvetica Neue', Helvetia, Arial, sans-serif;
+$light-sans-serif: 'Proxima Nova Light', 'Helvetica Neue', Helvetia, Arial, sans-serif;
+$semibold-sans-serif: 'Proxima Nova Semibold', 'Helvetica Neue', Helvetia, Arial, sans-serif;
+$bold-sans-serif: 'Proxima Nova Bold', 'Helvetica Neue', Helvetia, Arial, sans-serif;
+
+// Theme Specific Fonts
+
+// Container Widths
+$large-container-width: 1280px;
+$medium-container-width: 960px;
+$small-container-width: 768px;
+$extra-small-container-width: 480px;
+
