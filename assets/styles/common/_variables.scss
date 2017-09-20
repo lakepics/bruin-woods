@@ -14,8 +14,8 @@ $gray:                  #666666; // Tertiary Palette, Gray
 
 
 // Theme Specific Colors
-$brand-primary:         #013c6f; // dark blue header/footer background
-$darker-blue:           #00284a; // used for sub page header backgrounds
+$brand-primary:         #00a5e5; // Secondary Palette, Light Blue
+$bw-gold:               #FFB300;
 $dark-gray:             #363636; // gray content section background
 $white:                 #FFFFFF;
 $link-inline:           #9edeff; // gray content link color
@@ -29,6 +29,7 @@ $semibold-sans-serif: 'Proxima Nova Semibold', 'Helvetica Neue', Helvetia, Arial
 $bold-sans-serif: 'Proxima Nova Bold', 'Helvetica Neue', Helvetia, Arial, sans-serif;
 
 // Theme Specific Fonts
+$serif: 'urw-antiqua', 'Times New Roman', Times, serif; // URW Antiqua from TypeKit
 
 // Container Widths
 $large-container-width: 1280px;
