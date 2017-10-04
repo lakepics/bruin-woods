@@ -8,16 +8,17 @@
 // Small Devices, Tablets
 @media only screen and (min-width: $small-container-width) {
     .banner {
+        background: rgba(0, 165, 229, .9);
+        background: -moz-linear-gradient(left, rgba(0, 165, 229, 1) 0%, rgba(0, 255, 255, 0.9) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0, 165, 229, 1)), color-stop(100%, rgba(0, 255, 255, 0.9)));
+        background: -webkit-linear-gradient(left, rgba(0, 165, 229, 1) 0%, rgba(0, 255, 255, 0.9) 100%);
+        background: -o-linear-gradient(left, rgba(0, 165, 229, 1) 0%, rgba(0, 255, 255, 0.95) 100%);
+        background: -ms-linear-gradient(left, rgba(0, 165, 229, 1) 0%, rgba(0, 255, 255, 0.9) 100%);
+        background: linear-gradient(to right, rgba(0, 165, 229, 1) 0%, rgba(0, 255, 255, 0.9) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a5e5', endColorstr='#00ffff', GradientType=1);
         height: 140px;
         min-height: 140px;
-        background: rgba(0, 165, 229, 1);
-        background: -moz-linear-gradient(left, rgba(0, 165, 229, 1) 0%, rgba(0, 255, 255, 0.95) 100%);
-        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0, 165, 229, 1)), color-stop(100%, rgba(0, 255, 255, 0.95)));
-        background: -webkit-linear-gradient(left, rgba(0, 165, 229, 1) 0%, rgba(0, 255, 255, 0.95) 100%);
-        background: -o-linear-gradient(left, rgba(0, 165, 229, 1) 0%, rgba(0, 255, 255, 0.95) 100%);
-        background: -ms-linear-gradient(left, rgba(0, 165, 229, 1) 0%, rgba(0, 255, 255, 0.95) 100%);
-        background: linear-gradient(to right, rgba(0, 165, 229, 1) 0%, rgba(0, 255, 255, 0.95) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a5e5', endColorstr='#00ffff', GradientType=1);
+        // display: none;
         >.container {
             height: 140px;
         }
@@ -29,12 +30,15 @@
     .brand {
         float: left;
     }
+    .nav {
+        display: block;
+    }
     .nav-primary {
         float: right;
-        max-width: 1000px;
+        //max-width: 1000px;
         font-family: $sans-serif;
         font-weight: 400;
-        font-size: 14px;
+        font-size: .9rem;
         text-transform: uppercase;
         letter-spacing: .0625em;
         .nav,
@@ -45,38 +49,43 @@
             list-style: none;
         }
         .nav {
+            margin-top: 91px;
             position: relative;
-            top: 101px;
             display: inline-block;
         }
         .sub-menu {
+            position: absolute;
+            width: 100%;
             display: none;
         }
         .menu-item {
             float: left;
         }
         .menu-item-has-children {
-            /*  .sub-menu {
-                width: 2560px;
-                background: red;
-            }
-                &:hover {
+            position: static;
+            &:hover {
                 .sub-menu {
-                    display: inline-block;
-                    position: absolute;
-                    width: 100%;
-                    background: rgba(0, 165, 229, 1);
-                    background: -moz-linear-gradient(left, rgba(0, 165, 229, 1) 0%, rgba(0, 255, 255, 0.95) 100%);
-                    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0, 165, 229, 1)), color-stop(100%, rgba(0, 255, 255, 0.95)));
-                    background: -webkit-linear-gradient(left, rgba(0, 165, 229, 1) 0%, rgba(0, 255, 255, 0.95) 100%);
-                    background: -o-linear-gradient(left, rgba(0, 165, 229, 1) 0%, rgba(0, 255, 255, 0.95) 100%);
-                    background: -ms-linear-gradient(left, rgba(0, 165, 229, 1) 0%, rgba(0, 255, 255, 0.95) 100%);
-                    background: linear-gradient(to right, rgba(0, 165, 229, 1) 0%, rgba(0, 255, 255, 0.95) 100%);
+                    display: block;
+                    background: rgba(0, 165, 229, .75);
+                    background: -moz-linear-gradient(left, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
+                    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0, 165, 229, 1)), color-stop(100%, rgba(0, 255, 255, 0.75)));
+                    background: -webkit-linear-gradient(left, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
+                    background: -o-linear-gradient(left, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
+                    background: -ms-linear-gradient(left, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
+                    background: linear-gradient(to right, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
                     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a5e5', endColorstr='#00ffff', GradientType=1);
-                    top: 35px;
-                    height: 30px;
+                    height: 49px;
                 }
-            } */
+            }
+        }
+        .dropdown-nav-wrapper {
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 2560px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
         }
         a {
             color: $white;
@@ -85,9 +94,20 @@
             padding: 1px 13px;
             line-height: 50px;
             height: 49px;
+            position: relative;
             &:hover {
-                background: red;
+                color: $brand-gold;
             }
+        }
+    }
+    .dropdown-nav-background {
+        height: 50px;
+        position: absolute;
+        color: red;
+        width: 100%;
+        display: none;
+        &:hover {
+            display: block;
         }
     }
 }
@@ -96,4 +116,8 @@
 @media only screen and (min-width: $medium-container-width) {}
 
 // Large Devices, Wide Screens
-@media only screen and (min-width: $large-container-width) {}
+@media only screen and (min-width: $large-container-width) {
+    .dropdown-nav-wrapper {
+        width: 2560px;
+    }
+}

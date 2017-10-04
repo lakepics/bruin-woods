@@ -2,13 +2,75 @@
 // Footer Styles
 //
 // 0up
-
-
 // Extra Small Devices, Phones
 @media only screen and (min-width: $extra-small-container-width) {}
 
 // Small Devices, Tablets
-@media only screen and (min-width: $small-container-width) {}
+@media only screen and (min-width: $small-container-width) {
+    .footer {
+        height: 440px;
+        min-height: 440px;
+        background: $light-blue;
+        background-image: url('/bw/wp-content/themes/bw/dist/images/mountain3.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center bottom;
+        overflow: hidden;
+        border-top: 4px solid $white;
+        >.container {
+            height: 440px;
+        }
+        &__column {
+            color: $white;
+            z-index: 100;
+            margin-top: 100px;
+        }
+        &__register {
+            display: block;
+            background-image: url('/bw/wp-content/themes/bw/dist/images/register-badge2.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            img {
+                height: 180px;
+                display: block;
+                margin: 0 auto;
+            }
+            h3 {
+                line-height: 180px;
+            }
+            a {
+                text-decoration: none;
+                color: $white;
+            }
+        }
+        &__logo {
+            display: block;
+            margin-bottom: 50px;
+            img {
+                height: 150px;
+                display: block;
+            }
+        }
+        &__register {
+            margin-top: 70px;
+        }
+        &__social-icon a i {
+            margin-right: .5em;
+            color: $white;
+        }
+        h3 {
+            text-transform: uppercase;
+            font-size: 28px;
+            font-family: $semibold-sans-serif;
+            letter-spacing: 0.0625em;
+        }
+        p {
+            display: inline-block;
+            padding-left: 20px;
+        }
+    }
+}
 
 // Medium Devices, Desktops
 @media only screen and (min-width: $medium-container-width) {}
