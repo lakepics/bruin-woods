@@ -8,8 +8,14 @@
     // Small Devices, Tablets
     @media only screen and (min-width: $small-container-width) {
         .hero-slider {
+                min-height: 100vh;
             &__wrapper {
                 width: 100%;
+                min-height: 100vh;
+                background-size: cover;
+                background-position: center;
+                overflow: hidden;
+
             }
             &__overlay-wrapper {
                 position: absolute;

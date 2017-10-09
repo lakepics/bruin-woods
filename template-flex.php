@@ -138,13 +138,19 @@ if( have_rows('flex_content') ):
         elseif( get_row_layout() == '100_gallery' ):
             // setup container here
             if ( have_rows('images')) :
+                echo '<div class="container-fluid activities-grid">';
                 while (have_rows('images')) :
                 $width = get_sub_field('width');
-                $image = get_sub_field('image');
-                $image = get_sub_field('label');
+                $image_url = get_sub_field('image[url]');
+                $image_alt = get_sub_field('image[alt]');
+                $label = get_sub_field('label');
 
                 // layout goes below
+
+                    echo '<div class="col-' . $width . '"><img src="' . $image_url . '" alt="' . $image_alt . '"><span class="mountain-background">' . $label . '</span></div>';
+
                 endwhile;
+                echo '</div>';
             endif;
 
         endif;

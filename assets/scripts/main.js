@@ -34,6 +34,7 @@
                 // Initialize Slick Slider
                 $('.hero-slider').slick({
                     autoplay: true,
+                    adaptiveHeight: true,
                     arrows: true,
                     nextArrow: '<i class="fa fa-angle-right fa-3x" aria-hidden="true"></i>',
                     prevArrow: '<i class="fa fa-angle-left fa-3x" aria-hidden="true"></i>',

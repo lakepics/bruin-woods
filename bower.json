@@ -7,13 +7,15 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "bootstrap": "git://github.com/twbs/bootstrap.git#v4.0.0-beta",
+    "bootstrap": "git://github.com/twbs/bootstrap.git#v3.3.7",
     "font-awesome": "^4.7.0",
     "popper.js": "^1.12.3",
     "fancybox": "^3.1.25",
     "isotope": "^3.0.4",
     "slick-carousel": "^1.8.0",
-    "bootstrap-hover-dropdown": "^2.2.1"
+    "bootstrap-hover-dropdown": "^2.2.1",
+    "bootstrap-3.3.7-dist": "https://github.com/twbs/bootstrap/releases/download/v3.3.7/bootstrap-3.3.7-dist.zip",
+    "bootstrap-sass": "boostrap-sass#^3.3.7"
   },
   "overrides": {
     "font-awesome": {
@@ -35,6 +37,6 @@
     }
   },
   "resolutions": {
-    "bootstrap": "v4.0.0-beta"
+    "bootstrap": "v3.3.7"
   }
 }
