@@ -20,7 +20,7 @@
             init: function () {
                 // JavaScript to be fired on all pages kk
                 $('.dropdown-toggle').attr("data-hover", "dropdown");
-                $(".sub-menu").wrapInner("<span class='dropdown-nav-wrapper'></span>");
+                $('ul.dropdown-menu').wrapInner('<span class="dropdown-nav-wrapper"></span>');
 
 
             },

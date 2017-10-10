@@ -42,7 +42,7 @@ if( have_rows('page_content') ):
                     $copy = get_sub_field('copy');
                     $link = get_sub_field('round_button');
 
-					echo '<div class="front-page__columns col-4 px-4">
+					echo '<div class="front-page__columns col-sm-4">
                             <h3>' . $heading . '</h3>' .
                             $copy .
                             '<a class="button button--round button--blue" href="' . $link['url'] . '">' . $link['title'] . '</a>

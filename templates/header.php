@@ -1,17 +1,27 @@
-<header class="banner fixed-top">
+<?php
+  // This file assumes that you have included the nav walker from https://github.com/twittem/wp-bootstrap-navwalker
+  // somewhere in your theme.
+?>
+
+<header class="banner navbar navbar-default navbar-fixed-top" role="banner">
   <div class="container">
-    <a class="brand" href="<?= esc_url(home_url('/')); ?>"><img class="logo" src="/bw/wp-content/themes/bw/dist/images/logo.svg" alt="UCLA Bruin Woods Family Resort at Lake Arrowhead"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-   <!-- <div class="collapse navbar-collapse" id="navbarsExampleDefault"> -->
-    <nav class="nav nav-primary" role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only"><?= __('Toggle navigation', 'sage'); ?></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"><img src="<?php bloginfo('template_directory'); ?>/dist/images/logo.svg" alt="<?php bloginfo('name'); ?>"></a>
+    </div>
+
+    <nav class="collapse navbar-collapse" role="navigation">
       <?php
       if (has_nav_menu('primary_navigation')) :
-        wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav']);
+        wp_nav_menu(['theme_location' => 'primary_navigation', 'walker' => new wp_bootstrap_navwalker(), 'menu_class' => 'nav navbar-nav']);
       endif;
       ?>
     </nav>
-      <!-- </div> -->
   </div>
 </header>
+

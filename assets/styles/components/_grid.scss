@@ -1,5 +1,17 @@
 // Grid system
 .main {
+  @include make-sm-column($main-sm-columns);
+  .sidebar-primary & {
+    @include make-sm-column($main-sm-columns - $sidebar-sm-columns);
+  }
+}
+.sidebar {
+  @include make-sm-column($sidebar-sm-columns);
+}
+
+
+/* Sage w/ BS 4 code // Grid system
+.main {
   @include make-col-ready();
   @include media-breakpoint-up(sm) {
     @include make-col($main-sm-columns);
@@ -14,3 +26,4 @@
     @include make-col($sidebar-sm-columns);
   }
 }
+*/

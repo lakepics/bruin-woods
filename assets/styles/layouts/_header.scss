@@ -2,6 +2,18 @@
 // Header Styles
 //
 // 0up
+.nav {
+    >li {
+        position: static;
+        >a {
+            position: static;
+        }
+        >a:hover {
+            background-color: $light-blue;
+        }
+    }
+}
+
 // Extra Small Devices, Phones
 @media only screen and (min-width: $extra-small-container-width) {}
 
@@ -23,9 +35,52 @@
             height: 140px;
         }
     }
-    .logo {
-        height: 100px;
-        margin-top: 20px;
+    .navbar {
+        border-bottom-width: 0;
+    }
+    .navbar-brand {
+        height: auto;
+        padding: 0;
+        img {
+            height: 100px;
+            margin-top: 20px;
+        }
+    }
+    .navbar-default {
+        .navbar-nav {
+            >li {
+                >a {
+                    color: $white;
+                    text-transform: uppercase;
+                    font-family: $sans-serif;
+                    padding-left: 13px;
+                    padding-right: 13px;
+                    .caret {
+                        display: none;
+                    }
+                }
+                >a:hover {
+                    color: $white;
+                }
+            }
+            >.active {
+                >a {
+                    background-color: transparent;
+                    color: $white;
+                }
+            }
+            >.open {
+                >a,
+                >a:focus,
+                >a:hover {
+                    border-top: 0;
+                    border-bottom: 0;
+                    background-color: transparent;
+                    color: $white;
+                    z-index: 1001;
+                }
+            }
+        }
     }
     .brand {
         float: left;
@@ -33,12 +88,15 @@
     .nav {
         display: block;
     }
+    .menu-primary-navigation-container {
+        margin-top: 85px;
+        float: right;
+    }
     .nav-primary {
         float: right;
-        //max-width: 1000px;
         font-family: $sans-serif;
         font-weight: 400;
-        font-size: .9rem;
+        font-size: .9em;
         text-transform: uppercase;
         letter-spacing: .0625em;
         .nav,
@@ -51,40 +109,15 @@
         .nav {
             margin-top: 91px;
             position: relative;
-            display: inline-block;
-        }
-        .sub-menu {
-            position: absolute;
-            width: 100%;
-            display: none;
-        }
-        .menu-item {
-            float: left;
-        }
-        .menu-item-has-children {
-            position: static;
-            &:hover {
-                .sub-menu {
-                    display: block;
-                    background: rgba(0, 165, 229, .75);
-                    background: -moz-linear-gradient(left, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
-                    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0, 165, 229, 1)), color-stop(100%, rgba(0, 255, 255, 0.75)));
-                    background: -webkit-linear-gradient(left, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
-                    background: -o-linear-gradient(left, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
-                    background: -ms-linear-gradient(left, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
-                    background: linear-gradient(to right, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
-                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a5e5', endColorstr='#00ffff', GradientType=1);
-                    height: 49px;
+            >li {
+                position: static;
+                >a {
+                    position: static;
                 }
             }
         }
-        .dropdown-nav-wrapper {
-            position: absolute;
-            width: 250px;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            text-align: left;
+        .menu-item {
+            float: right;
         }
         a {
             color: $white;
@@ -99,14 +132,45 @@
             }
         }
     }
-    .dropdown-nav-background {
-        height: 50px;
-        position: absolute;
-        color: red;
-        width: 100%;
-        display: none;
-        &:hover {
+    .dropdown-menu {
+        height: 45px;
+        width: 2560px;
+        width: 100vw;
+        top: 100%;
+        background: rgba(0, 165, 229, .75);
+        background: -moz-linear-gradient(left, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0, 165, 229, 1)), color-stop(100%, rgba(0, 255, 255, 0.75)));
+        background: -webkit-linear-gradient(left, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
+        background: -o-linear-gradient(left, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
+        background: -ms-linear-gradient(left, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
+        background: linear-gradient(to right, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a5e5', endColorstr='#00ffff', GradientType=1);
+        border-radius: 0;
+        border-width: 0;
+        .dropdown-nav-wrapper {
             display: block;
+            width: $large-container-width;
+            margin-left: auto;
+            margin-right: auto;
+            border-width: 0;
+            >li {
+                position: relative;
+                margin-left: auto;
+                margin-right: auto;
+                display: inline-block;
+                >a {
+                    display: inline-block;
+                    float: left;
+                    padding: 0 10px;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    line-height: 36px;
+                    color: $white;
+                    clear: none;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                }
+            }
         }
     }
 }
@@ -115,8 +179,4 @@
 @media only screen and (min-width: $medium-container-width) {}
 
 // Large Devices, Wide Screens
-@media only screen and (min-width: $large-container-width) {
-    .dropdown-nav-wrapper {
-        width: 2560px;
-    }
-}
+@media only screen and (min-width: $large-container-width) {}
