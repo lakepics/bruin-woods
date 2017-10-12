@@ -64,7 +64,9 @@
                 }
             }
             >.active {
-                >a {
+                >a,
+                >a:hover,
+                >a:focus {
                     background-color: transparent;
                     color: $white;
                 }
