@@ -18,20 +18,19 @@
             padding-top: 60px;
             padding-bottom: 60px;
             p {
-                margin-top: 30px;
                 margin-bottom: 30px;
+                font-size: 1.2em;
+                text-align: center;
             }
         }
         &__heading {
             h2 {
-                font-size: 3.5rem;
+                font-size: 3.5em;
                 >span {
                     font-family: $sans-serif;
                     font-weight: 400;
-                    font-size: 3.5rem;
                 }
             }
-
         }
         &__background-image {
             background-position: center;
@@ -39,29 +38,40 @@
             background-size: cover;
         }
         &__softbox {
+            display: inline-block;
             background: rgba(255, 255, 255, .5);
             margin: 80px auto;
             padding: 50px;
         }
         &__softbox-content {
             p {
-                line-height: 2.5rem;
+                line-height: 1.85em;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 0;
             }
         }
         &__columns {
+            padding-left: 50px;
+            padding-right: 50px;
+            border-right: 1px solid $brand-gold;
+            &:last-of-type {
+                border-right: 0;
+            }
             h3 {
                 padding: 10px 20px;
-                border: 1px solid $brand-primary;
                 color: $brand-primary;
                 text-transform: uppercase;
-                font-family: $light-sans-serif;
+                font-family: $serif;
                 font-weight: 300;
                 font-style: normal;
-                font-size: 1.2rem;
+                font-size: 1.75em;
                 text-align: center;
                 width: 100%;
-                margin-bottom: 20px;
-                letter-spacing: 0.0625em;
+                letter-spacing: 0.0375em;
+            }
+            a {
+                font-size: .9em;
             }
         }
         &__map-section {
@@ -70,11 +80,148 @@
     }
     .hero {
         padding-bottom: 50px;
+        &__background-image {
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        &__text-container {
+            margin-top: 190px;
+        }
     }
-    h1 {
-        color: $brand-primary;
-        >span {
-            color: $brand-gold;
+    .table-section {
+        padding-bottom: 50px;
+        &__background-image {
+            background-position: center top;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-origin: border-box;
+            border-top: 4px solid rgba(255, 179, 0, .25);
+            border-bottom: 4px solid rgba(255, 179, 0, .25);
+        }
+        h2 {
+            font-size: 1.6em;
+            margin-top: 60px;
+        }
+        &__row {
+            border: 1px solid $brand-primary;
+            margin-bottom: 20px;
+            background: $white;
+        }
+        .cell {
+            padding: 10px 15px;
+            font-size: .8em;
+            font-family: $sans-serif;
+            text-transform: uppercase;
+            color: $brand-primary;
+            background: $white;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 1.1em;
+            letter-spacing: .0625em;
+            &--reverse {
+                background: $brand-primary;
+                color: $white;
+            }
+            &--left {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+            &--right {}
+            &__wrapper {
+                padding-right: 50px;
+            }
+        }
+    }
+    .content-section {
+        padding-bottom: 70px;
+        h2 {
+            margin-top: 70px;
+            margin-bottom: 15px;
+        }
+        &__background-image {
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        &__softbox {
+            background: rgba(255, 255, 255, .5);
+        }
+    }
+    .section-type {
+        font-family: "urw-antiqua", serif;
+        font-weight: 400;
+        font-style: italic;
+        color: #00a5e5;
+        font-size: 9em;
+        line-height: 1em;
+        opacity: .1;
+        text-transform: lowercase;
+        position: fixed;
+        left: 5%;
+        top: 100px;
+    }
+    .family-holidays {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        font-size: 16px;
+        font-family: $light-sans-serif;
+        font-weight: 300;
+        line-height: 2em;
+        &__background-image {
+            background-position: center top;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-origin: border-box;
+            border-top: 4px solid rgba(255, 179, 0, .25);
+            border-bottom: 4px solid rgba(255, 179, 0, .25);
+        }
+        &__notice {
+            margin-top: 30px;
+            font-size: 18px;
+            font-style: italic;
+            font-family: $italic-sans-serif;
+            font-weight: 400;
+        }
+        &__pr {
+            // padding-left: 20px;
+        }
+        h2 {
+            font-size: 2.75em;
+            span {
+                font-size: .5em;
+            }
+        }
+    }
+    .activities-grid {
+        .image-wrapper {
+            position: relative;
+            border: 3px solid $white;
+            img {
+                width: 100%;
+                overflow: hidden;
+            }
+        }
+        .mountain-background {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            overflow: hidden;
+            background-image: url('#{$document-root}/wp-content/themes/bw/dist/images/activites-mountain-background.png');
+            background-position: left;
+            height: 180px;
+            width: 400px;
+            z-index: 1000;
+            p {
+                position: absolute;
+                bottom: 0;
+                left: 20px;
+                margin-bottom: 0;
+                font-family: $serif;
+                font-size: 2em;
+                color: $white;
+                text-transform: uppercase;
+            }
         }
     }
 }

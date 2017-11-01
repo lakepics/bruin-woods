@@ -35,6 +35,9 @@ $serif: 'urw-antiqua', 'Times New Roman', Times, serif; // URW Antiqua from Type
 $large-container-width: 1280px;
 $container-lg: 1280px;
 $medium-container-width: 1024px;
+$container-md: 992px;
 $small-container-width: 768px;
 $extra-small-container-width: 480px;
 
+// Making it easier to move between local and server environments
+$document-root: '/bw';

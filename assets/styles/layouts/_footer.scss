@@ -11,7 +11,7 @@
         height: 440px;
         min-height: 440px;
         background: $light-blue;
-        background-image: url('/bw/wp-content/themes/bw/dist/images/mountain3.svg');
+        // background-image: url('#{$document-root}/wp-content/themes/bw/dist/images/mountain3.svg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center bottom;
@@ -24,10 +24,13 @@
             color: $white;
             z-index: 100;
             margin-top: 100px;
+            h3 {
+                margin-top: 70px;
+            }
         }
         &__register {
             display: block;
-            background-image: url('/bw/wp-content/themes/bw/dist/images/register-badge2.svg');
+            background-image: url('#{$document-root}/wp-content/themes/bw/dist/images/register-badge2.svg');
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
@@ -61,13 +64,33 @@
         }
         h3 {
             text-transform: uppercase;
-            font-size: 28px;
+            font-size: 1.25em;
             font-family: $semibold-sans-serif;
             letter-spacing: 0.0625em;
         }
         p {
             display: inline-block;
-            padding-left: 20px;
+            padding-left: 5px;
+            &.phone {
+                margin-bottom: 1em;
+            }
+        }
+        .fa-1-5x {
+            font-size: 1.5em !important;
+        }
+        .boiler {
+            color: $white;
+            font-size: .65em;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.0625em;
+            a {
+                color: $white;
+                text-decoration: none;
+                &::before {
+                    content: '\00a0 \00a0 | \00a0 \00a0';
+                }
+            }
         }
     }
 }

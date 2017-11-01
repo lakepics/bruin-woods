@@ -2,42 +2,49 @@
 // Global Styles
 //
 // 0up
-
 h1 {
-    font-family: "urw-antiqua", serif;
+    font-family: $serif;
     font-weight: 400;
     font-style: italic;
-    font-size: 2.625rem;
+    font-size: 2.625em;
     text-transform: uppercase;
+    color: $brand-primary;
     >span {
         display: block;
-        padding-top: 20px;
         font-family: $sans-serif;
         font-weight: 400;
-        font-size: 3rem;
+        font-size: 1em;
         font-style: normal;
         text-transform: uppercase;
-        line-height: 3.25rem;
+        line-height: 1em;
+        color: $brand-gold;
     }
 }
 
 h2 {
-    font-size: 1.75rem;
+    font-size: 1.75em;
+    >span {
+        display: block;
+    }
 }
 
-p {
+p,
+li {
     font-family: $light-sans-serif;
     font-weight: 300;
-    font-size: 1.1rem;
-    line-height: 1.66rem;
+    font-size: 1em;
+    line-height: 1.85em;
+}
+p {
+    margin-bottom: 1.65em;
 }
 
 .antiqua {
-    font-family: "urw-antiqua", serif;
+    font-family: $serif;
     font-weight: 400;
     font-style: italic;
     text-transform: uppercase;
-    letter-spacing: 0.0625em;
+    letter-spacing: 0.0375em;
 }
 
 .proxima {
@@ -55,117 +62,37 @@ p {
 .gold {
     color: $brand-gold;
 }
-
-.hero {
-    &__background-image {
-        background-position: center bottom;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    &__text-container {
-        margin-top: 190px;
-    }
+.white {
+    color: $white;
 }
 
-.table-section {
-    padding-bottom: 50px;
-    &__background-image {
-        background-position: center top;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-origin: border-box;
-        border-top: 4px solid rgba(255, 179, 0, .25);
-        border-bottom: 4px solid rgba(255, 179, 0, .25);
-    }
-    h2 {
-        font-size: 1.6rem;
-        margin-top: 60px;
-    }
-    .cell {
-        margin-bottom: 20px;
-        padding: 10px 15px;
-        font-size: 1rem;
-        font-family: $sans-serif;
-        text-transform: uppercase;
-        color: $brand-primary;
-        border: 1px solid $brand-primary;
-        background: $white;
-        text-align: center;
-        line-height: 1.1rem;
-        &--reverse {
-            background: $brand-primary;
-            color: $white;
-        }
-        &--left {
-            padding-left: 5px;
-            padding-right: 5px;
-        }
-        &--right {}
-        &__wrapper {
-            padding-right: 50px;
-        }
-    }
+.no-padding {
+    padding: 0!important;
 }
-.content-section {
-    padding-bottom: 70px;
-    h2 {
-        margin-top: 70px;
-        margin-bottom: 35px;
-    }
-    p {
-        line-height: 1.85em;
-    }
-    &__background-image {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    &__softbox {
-        background: rgba(255,255,255,.5);
-    }
-}
-.section-type {
-    font-family: "urw-antiqua", serif;
-    font-weight: 400;
-    font-style: italic;
-    color: #00a5e5;
-    font-size: 9rem;
-    line-height: 4rem;
-    opacity: .1;
-    text-transform: lowercase;
-    position: fixed;
-    left: 5%;
-    top: 130px;
-}
-
-.fade-right-background {}
 
 // Extra Small Devices, Phones
-@media only screen and (min-width: $extra-small-container-width) {
-
-}
+@media only screen and (min-width: $extra-small-container-width) {}
 
 // Small Devices, Tablets
 @media only screen and (min-width: $small-container-width) {
-    html {
+    body {
         font-size: 12px;
     }
 }
 
 // Medium Devices, Desktops
 @media only screen and (min-width: $medium-container-width) {
-    html {
+    body {
         font-size: 14px;
     }
 }
 
 // Large Devices, Wide Screens
 @media only screen and (min-width: $large-container-width) {
-    html {
-        font-size: 16px;
+    body {
+        font-size: 18px;
     }
     .container {
         max-width: $large-container-width;
     }
-
 }

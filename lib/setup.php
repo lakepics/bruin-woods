@@ -64,8 +64,8 @@ function widgets_init() {
   ]);
 
   register_sidebar([
-    'name'          => __('Footer-Left-Column', 'sage'),
-    'id'            => 'sidebar-footer-left-column',
+    'name'          => __('Footer-Column-One', 'sage'),
+    'id'            => 'sidebar-footer-column-one',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h3>',
@@ -73,8 +73,8 @@ function widgets_init() {
   ]);
 
   register_sidebar([
-    'name'          => __('Footer-Middle-Column', 'sage'),
-    'id'            => 'sidebar-footer-middle-column',
+    'name'          => __('Footer-Column-Two', 'sage'),
+    'id'            => 'sidebar-footer-column-two',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h3>',
@@ -82,8 +82,17 @@ function widgets_init() {
   ]);
 
   register_sidebar([
-    'name'          => __('Footer-Right-Column', 'sage'),
-    'id'            => 'sidebar-footer-right-column',
+    'name'          => __('Footer-Column-Three', 'sage'),
+    'id'            => 'sidebar-footer-column-three',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>'
+  ]);
+
+  register_sidebar([
+    'name'          => __('Footer-Column-Four', 'sage'),
+    'id'            => 'sidebar-footer-column-four',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h3>',

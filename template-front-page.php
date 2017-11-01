@@ -22,7 +22,7 @@ if( have_rows('page_content') ):
                         <div class="col-12 text-center front-page__heading">
                             <h2 class="blue antiqua">' .
                             get_sub_field('h2_antiqua') .
-                            '<br><span class="proxima gold"> ' .
+                            '<span class="proxima gold"> ' .
                             get_sub_field('h2_proxima') .
                             '</span>
                             </h2>
@@ -62,13 +62,16 @@ if( have_rows('page_content') ):
         	echo '<div class="front-page__background-image" style="background-image: url(\'' . $background_image['url'] . '\');">
                         <div class="container front-page__map-section">
                             <div class="row">
-                            <div class="col-7 mx-auto front-page__softbox text-center">
-                                <div class="col-12 front-page__heading">
+                            <div class="col-sm-8 col-sm-offset-2 text-center">
+
+                                <div class="front-page__softbox">
+                                <div class="col-sm-12 front-page__heading">
                                     <h2 class="blue antiqua">' . get_sub_field('h2_antiqua') . '<br><span class="gold proxima">' . get_sub_field('h2_proxima') . '</span></h2>
                                 </div>
-                                <div class="col-12 front-page__softbox-content"><p class="my-3">' .
+                                <div class="col-sm-12 front-page__softbox-content"><p>' .
                                     get_sub_field('copy') .
                                     '</p><a class="button button--blue" target="' . $button['target']. '" href="' . $button['url'] . '">' . $button['title'] . ' <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                </div>
                                 </div>
                                 </div>
                             </div>

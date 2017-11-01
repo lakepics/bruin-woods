@@ -2,7 +2,7 @@
 // Header Styles
 //
 // 0up
-/* .nav {
+.nav {
     >li {
         position: static;
         >a {
@@ -42,25 +42,31 @@
         height: auto;
         padding: 0;
         img {
-            height: 100px;
-            margin-top: 20px;
+            height: 80px;
+            margin-top: 36px;
         }
     }
-  /*  .navbar-default {
+    .navbar-default {
         .navbar-nav {
             >li {
                 >a {
-                    color: $white;
-                    text-transform: uppercase;
-                    font-family: $sans-serif;
                     padding-left: 13px;
                     padding-right: 13px;
-                     .caret {
+                    color: $white;
+                    font-family: $sans-serif;
+                    font-weight: 400;
+                    font-size: 1em;
+                    text-transform: uppercase;
+                    letter-spacing: .1em;
+                    .caret {
                         display: none;
                     }
-                }
-                >a:hover {
-                    color: $white;
+                    &:hover {
+                        color: $ucla-blue;
+                    }
+                    &:active {
+                        color: $brand-gold;
+                    }
                 }
             }
             >.active {
@@ -68,7 +74,9 @@
                 >a:hover,
                 >a:focus {
                     background-color: transparent;
-                    color: $white;
+                    color: $ucla-blue;
+                    font-family: $semibold-sans-serif;
+                    font-weight: 600;
                 }
             }
             >.open {
@@ -78,7 +86,9 @@
                     border-top: 0;
                     border-bottom: 0;
                     background-color: transparent;
-                    color: $white;
+                    color: $ucla-blue;
+                    font-family: $semibold-sans-serif;
+                    font-weight: 600;
                     z-index: 1001;
                 }
             }
@@ -96,11 +106,6 @@
     }
     .nav-primary {
         float: right;
-        font-family: $sans-serif;
-        font-weight: 400;
-        font-size: .9em;
-        text-transform: uppercase;
-        letter-spacing: .0625em;
         .nav,
         .menu-item,
         .sub-menu {
@@ -111,27 +116,6 @@
         .nav {
             margin-top: 91px;
             position: relative;
-            >li {
-                position: static;
-                >a {
-                    position: static;
-                }
-            }
-        }
-        .menu-item {
-            float: right;
-        }
-        a {
-            color: $white;
-            text-decoration: none;
-            display: inline-block;
-            padding: 1px 13px;
-            line-height: 50px;
-            height: 49px;
-            position: relative;
-            &:hover {
-                color: $brand-gold;
-            }
         }
     }
     .dropdown-menu {
@@ -139,22 +123,23 @@
         width: 2560px;
         width: 100vw;
         top: 100%;
-        background: rgba(0, 165, 229, .75);
-        background: -moz-linear-gradient(left, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
-        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0, 165, 229, 1)), color-stop(100%, rgba(0, 255, 255, 0.75)));
-        background: -webkit-linear-gradient(left, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
-        background: -o-linear-gradient(left, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
-        background: -ms-linear-gradient(left, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
-        background: linear-gradient(to right, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a5e5', endColorstr='#00ffff', GradientType=1);
+        background: rgba(50, 132, 191, .55);
+        /*background: -moz-linear-gradient(left, rgba(0, 165, 229, .75) 0%, rgba(0, 255, 255, 0.5) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0, 165, 229, .75)), color-stop(100%, rgba(0, 255, 255, 0.5)));
+        background: -webkit-linear-gradient(left, rgba(0, 165, 229, .75) 0%, rgba(0, 255, 255, 0.5) 100%);
+        background: -o-linear-gradient(left, rgba(0, 165, 229, .75) 0%, rgba(0, 255, 255, 0.5) 100%);
+        background: -ms-linear-gradient(left, rgba(0, 165, 229, .75) 0%, rgba(0, 255, 255, 0.5) 100%);
+        background: linear-gradient(to right, rgba(0, 165, 229, .75) 0%, rgba(0, 255, 255, 0.5) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a5e5', endColorstr='#00ffff', GradientType=1); */
         border-radius: 0;
         border-width: 0;
         .dropdown-nav-wrapper {
             display: block;
-            width: $large-container-width;
+            width: $medium-container-width;
             margin-left: auto;
             margin-right: auto;
             border-width: 0;
+            text-align: right;
             >li {
                 position: relative;
                 margin-left: auto;
@@ -168,9 +153,13 @@
                     margin-right: 5px;
                     line-height: 36px;
                     color: $white;
+                    font-family: $sans-serif;
+                    font-weight: 400;
+                    font-size: 1em;
+                    text-transform: uppercase;
+                    letter-spacing: .1em;
                     clear: none;
                     text-decoration: none;
-                    text-transform: uppercase;
                 }
             }
         }
@@ -181,5 +170,34 @@
 @media only screen and (min-width: $medium-container-width) {}
 
 // Large Devices, Wide Screens
-@media only screen and (min-width: $large-container-width) {}
- */
+@media only screen and (min-width: $large-container-width) {
+    .navbar-default {
+        .navbar-nav {
+            >li {
+                >a {
+                    font-size: .8em;
+                }
+            }
+        }
+    }
+    .dropdown-menu {
+        .dropdown-nav-wrapper {
+            >li {
+                >a {
+                    //font-size: .75em;
+                }
+            }
+        }
+    }
+    .navbar-brand {
+        img {
+            height: 100px;
+            margin-top: 20px;
+        }
+    }
+    .dropdown-menu {
+        .dropdown-nav-wrapper {
+            width: $large-container-width;
+        }
+    }
+}
