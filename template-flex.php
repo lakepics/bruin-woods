@@ -15,6 +15,7 @@ function colBalance($col_bal) {
             elseif ($col_bal == '6-6') { $lt = 6; $rt = 6; }
             elseif ($col_bal == '7-5') { $lt = 7; $rt = 5; }
             elseif ($col_bal == '8-4') { $lt = 8; $rt = 4; }
+            elseif ($col_bal == '12-12') { $lt = 12; $rt = 12; }
             return array($lt, $rt);
 }
 
@@ -38,15 +39,25 @@ if( have_rows('flex_content') ):
             list($lt_col, $rt_col) = colBalance($col_bal);
 
             echo '<div class="hero__background-image" style="background-image: url(\'' . $hero_image['url'] . '\');"><div class="container hero">
-                <div class="row">
-                    <div class="col-sm-'.$lt_col.' hero__text-container">
+                <div class="row">';
+                if ( $lt_col == 12 ) {
+                    echo '<div class="col-sm-12 hero__text-container">
+                        <span class="section-type">' . $section_title . '</span>
+                        <h1>' . $heading_antiqua . '<span>' . $heading_proxima . '</span></h1>
+                        <h2 class="blue antiqua">' . $subheading . '</h2>' .
+                        $copy_lt . '
+                    </div>';
+                }
+            else {
+                    echo '<div class="col-sm-'.$lt_col.' hero__text-container">
                         <span class="section-type">' . $section_title . '</span>
                         <h1>' . $heading_antiqua . '<span>' . $heading_proxima . '</span></h1>
                         <h2 class="blue antiqua">' . $subheading . '</h2>' .
                         $copy_lt . '
                     </div>
-                    <div class="col-sm-'.$rt_col.'">'.$copy_rt.'</div>
-                </div>
+                    <div class="col-sm-'.$rt_col.'">'.$copy_rt.'</div>';
+            }
+             echo   '</div>
             </div>
         </div>';
 
@@ -93,6 +104,7 @@ if( have_rows('flex_content') ):
             $child_rate = get_sub_field('child_rate');
             $notice = get_sub_field('waitlist_notice');
             $holiday_full = get_sub_field('holiday_full');
+            $program_charts_url = get_sub_field('program_charts_url');
 
             // layout goes below
 
@@ -112,11 +124,14 @@ if( have_rows('flex_content') ):
                                 <div class="col-sm-7 family-holidays__pr"><span class="proxima">3 Years Old — 10<sup>th</sup> Grade:</span> '.$ya_rate.'</div>
                                 <div class="col-sm-7 text-left"><span class="proxima">Under 3 Years Old:</span> '.$child_rate.'</div></div>';
                                      if ( $holiday_full == false ) {
-                                        echo '<div class="row"><div class="col-sm-12"><a class="button button--blue" href="/family-holidays/apply/">Apply Today! &nbsp; <i class="fa fa-chevron-right" aria-hidden="true"></i></a></div></div>';
+                                        echo '<div class="row"><div class="col-sm-12"><a class="button button--blue" href="/family-holidays/apply/">Apply Today! &nbsp; <span class="fa fa-chevron-right" aria-hidden="true"></span></a></div></div>';
                                         }
                                     elseif ( $holiday_full == true ) {
                                         echo '<div class="row"><div class="col-sm-12 family-holidays__notice">'.$notice.'</div></div>';
                                         }
+                                    elseif ( $program_charts_url !== '' ) {
+                                        echo '<div class="row"><div class="col-sm-12"><a class="button button--blue" href="'.$program_charts_url.'">Download Program Chart &nbsp; <span class="fa fa-download" aria-hidden="true"></span></a></div></div>';
+                                    }
                         echo '
                         </div>
                         <div class="col-sm-5">
@@ -127,7 +142,7 @@ if( have_rows('flex_content') ):
 
                         <div class="col-sm-7 text-right">
                             <h2 class="blue antiqua">' . $holiday_name . '<span class="gold proxima">' .
-                            $holiday_dates . '</span></h2>
+                            $holiday_dates . $program_charts_url . '</span></h2>
                        <div class="row">
                                 <div class="col-sm-7 col-sm-offset-5 text-right"><span class="proxima">Arrive:</span> '. $arrival.'</div>
                                 <div class="col-sm-7 col-sm-offset-5 text-right"><span class="proxima">Depart:</span> '. $departure .'</div>
@@ -138,11 +153,14 @@ if( have_rows('flex_content') ):
                                 <div class="col-sm-7 col-sm-offset-5 text-right"><span class="proxima">Under 3 Years Old:</span> '.$child_rate.'</div>
                             </div></div>';
                                     if ( $holiday_full == false ) {
-                                        echo '<div class="row"><div class="col-sm-12 text-right"><a class="button button--blue" href="/family-holidays/apply/">Apply Today! &nbsp; <i class="fa fa-chevron-right" aria-hidden="true"></i></a></div></div>';
+                                        echo '<div class="row"><div class="col-sm-12 text-right"><a class="button button--blue" href="/family-holidays/apply/">Apply Today! &nbsp; <span class="fa fa-chevron-right" aria-hidden="true"></span></a></div></div>';
                                         }
                                     elseif ( $holiday_full == true ) {
                                         echo '<div class="row"><div class="col-sm-12 family-holidays__notice">'.$notice.'</div></div>';
                                         }
+                                    elseif ( !empty($program_charts_url) ) {
+                                        echo '<div class="row"><div class="col-sm-12 text-right"><a class="button button--blue" href="'.$program_charts_url.'">Download Program Chart &nbsp; <span class="fa fa-chevron-right" aria-hidden="true"></span></a></div></div>';
+                                    }
             }
 
             echo '   </div>
@@ -165,7 +183,7 @@ if( have_rows('flex_content') ):
                                 <div class="col-12 front-page__softbox-content">
                                     <p>' . get_sub_field('copy') . '</p>';
                                     if (!empty($button)) {
-                                        echo '<a class="button button--blue" target="' . $button['target']. '" href="' . $button['url'] . '">' . $button['title'] . ' <i class="fa fa-chevron-right" aria-hidden="true"></i></a>';
+                                        echo '<a class="button button--blue" target="' . $button['target']. '" href="' . $button['url'] . '">' . $button['title'] . ' <span class="fa fa-chevron-right" aria-hidden="true"></span></a>';
                                     }
                                 echo '</div>
                                 </div>
@@ -255,6 +273,21 @@ if( have_rows('flex_content') ):
                 </div>
             </div>';
 
+        elseif( get_row_layout() == 'masonry_gallery' ):
+            //setup container here
+            if (have_rows('gallery')) :
+                // let's build a snowman
+                // setup container and masonry scaffolding
+                echo '<div class="masonry-grid"><div class="grid"><div class="grid-sizer"></div>';
+                    // start pulling in images
+                while (have_rows('gallery')) : the_row();
+                    $image = get_sub_field('image');
+                    $factor = get_sub_field('format_size');
+                    echo '<div class="grid-item grid-item--'.$factor.'"><img src="'.$image['url'].'" alt="'.$image['alt'].'"></div>';
+                endwhile;
+                echo '</div></div>';
+                echo '</div></div>';
+            endif;
 
         elseif( get_row_layout() == '100_gallery' ):
             // setup container here

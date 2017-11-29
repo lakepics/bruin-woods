@@ -10,6 +10,9 @@
     color: $white;
     letter-spacing: .25em;
     text-transform: uppercase;
+    font-family: $sans-serif;
+    font-weight: 400;
+    font-style: normal;
     &--blue {
         border: 1px solid $brand-primary;
         color: $brand-primary;
@@ -29,6 +32,9 @@
         text-decoration: none;
         border: 1px solid $brand-gold;
         color: $brand-gold;
+    }
+    .fa-chevron-right {
+        vertical-align: middle;
     }
 }
 

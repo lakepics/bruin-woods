@@ -20,7 +20,7 @@
         </div>
         <div class="row">
             <div class="col-sm-8 col-sm-offset-2 boiler">
-                &copy 2017 UC Regents <a href="http://lakearrowheadconferencecenter.ucla.edu" target="_blank">UCLA Lake Arrohwead Conference Center</a> <a href="http://alumni.ucla.edu" target="_blank">UCLA Alumni Association</a>
+                &copy 2017 UC Regents <a href="http://lakearrowheadconferencecenter.ucla.edu" target="_blank">UCLA Lake Arrowhead Conference Center</a> <a href="http://alumni.ucla.edu" target="_blank">UCLA Alumni Association</a>
             </div>
         </div>
     </div>

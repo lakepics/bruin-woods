@@ -2,6 +2,49 @@
 // Page Styles
 //
 // 0up
+
+.masonry-grid {
+
+    margin-top: 140px;
+}
+
+.grid {
+  background: #EEE;
+
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: calc( (100% / 12) );
+}
+
+.grid-item {
+  height: auto;
+  float: left;
+    // 6 col grid w/ 4px gutters
+    &--w2h1, &--w2h2, &--w2h3 {
+        width: calc( ( 100% / 6 ) );
+    }
+    &--w3h2, &--w3h3 {
+        // for 3 column elements, divide by 4 instead of 6 and since that spans an additional gutter add 4px
+        width: calc( ( 100% / 4 ) );
+    }
+    img {
+        width: 100%;
+    }
+}
+
+
+
 // Extra Small Devices, Phones
 @media only screen and (min-width: $extra-small-container-width) {}
 
@@ -20,7 +63,7 @@
             p {
                 margin-bottom: 30px;
                 font-size: 1.2em;
-                text-align: center;
+                text-align: left;
             }
         }
         &__heading {
@@ -59,7 +102,7 @@
                 border-right: 0;
             }
             h3 {
-                padding: 10px 20px;
+                padding: 10px 0;
                 color: $brand-primary;
                 text-transform: uppercase;
                 font-family: $serif;

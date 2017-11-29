@@ -21,7 +21,6 @@
                 // JavaScript to be fired on all pages
                 $('ul.dropdown-menu').wrapInner('<span class="dropdown-nav-wrapper"></span>');
 
-
             },
             finalize: function () {
                 // JavaScript to be fired on all pages, after page specific JS is fired
@@ -35,13 +34,13 @@
                     autoplay: true,
                     adaptiveHeight: true,
                     autoplaySpeed: 4000,
-                    arrows: true,
                     nextArrow: '<i class="fa fa-angle-right fa-3x" aria-hidden="true"></i>',
                     prevArrow: '<i class="fa fa-angle-left fa-3x" aria-hidden="true"></i>',
                     appendArrows: $('.hero-slider__overlay-wrapper'),
                     appendDots: $('.hero-slider__overlay-wrapper'),
                     mobileFirst: true,
                     dots: true,
+                    arrows: true,
                     fade: true
                 });
             },
@@ -50,9 +49,10 @@
             }
         },
         // About us page, note the change from about-us to about_us.
-        'about_us': {
+        'gallery': {
             init: function () {
-                // JavaScript to be fired on the about us page
+                // JavaScript to be fired on the gallery page
+
             }
         }
     };
@@ -89,6 +89,15 @@
 
     // Load Events
     $(document).ready(UTIL.loadEvents);
+    var $gallery = $('.grid').masonry({
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-sizer',
+        percentPosition: true
+    });
+// layout Masonry after each image loads
+$gallery.imagesLoaded().progress( function() {
+  $gallery.masonry('layout');
+});
 
 
 })(jQuery); // Fully reference jQuery after this point.

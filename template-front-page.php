@@ -70,7 +70,7 @@ if( have_rows('page_content') ):
                                 </div>
                                 <div class="col-sm-12 front-page__softbox-content"><p>' .
                                     get_sub_field('copy') .
-                                    '</p><a class="button button--blue" target="' . $button['target']. '" href="' . $button['url'] . '">' . $button['title'] . ' <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                    '</p><a class="button button--blue" target="' . $button['target']. '" href="' . $button['url'] . '">' . $button['title'] . ' <span class="fa fa-chevron-right" aria-hidden="true"></span></a>
                                 </div>
                                 </div>
                                 </div>
