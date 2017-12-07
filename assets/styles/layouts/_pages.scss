@@ -5,7 +5,8 @@
 
 .masonry-grid {
 
-    margin-top: 140px;
+    margin-top: 144px;
+    margin-left: 4px;
 }
 
 .grid {
@@ -24,19 +25,22 @@
 
 .grid-sizer,
 .grid-item {
-  width: calc( (100% / 12) );
+  width: calc( 100% / 12 );
 }
 
 .grid-item {
   height: auto;
   float: left;
-    // 6 col grid w/ 4px gutters
+    margin-bottom: 4px;
+    // 100% / 6 for six double width columns, plus 4px for the gutter would have been in the middle, minus 4px for gutters
     &--w2h1, &--w2h2, &--w2h3 {
-        width: calc( ( 100% / 6 ) );
+       // current width: calc( ( 100% / 6 ) );
+        width: calc( (100% / 6) - 4px );
     }
     &--w3h2, &--w3h3 {
-        // for 3 column elements, divide by 4 instead of 6 and since that spans an additional gutter add 4px
-        width: calc( ( 100% / 4 ) );
+        // 100% / 4 (12 / 3 = 4) for 4 triple width columns, plus 8px for the two gutters in the middle, minus 4px for gutters
+        // current width: calc( ( 100% / 4 ) );
+        width: calc( (100% / 4) - 4px );
     }
     img {
         width: 100%;
@@ -145,6 +149,12 @@
         h2 {
             font-size: 1.6em;
             margin-top: 60px;
+        }
+        .subhead {
+            margin-bottom: 10px;
+            color: $dark-gray;
+            font-family: $sans-serif;
+            font-weight: 400;
         }
         &__row {
             border: 1px solid $brand-primary;

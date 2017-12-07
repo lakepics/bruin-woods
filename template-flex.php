@@ -99,6 +99,7 @@ if( have_rows('flex_content') ):
             $holiday_dates = get_sub_field('heading_proxima');
             $arrival = get_sub_field('arrival');
             $departure = get_sub_field('departure');
+            $rate_explanation = get_sub_field('rate_explanation');
             $adult_rate = get_sub_field('adult_rate');
             $ya_rate = get_sub_field('ya_rate');
             $child_rate = get_sub_field('child_rate');
@@ -118,6 +119,9 @@ if( have_rows('flex_content') ):
                     echo   '<div class="row">
                                 <div class="col-sm-7"><span class="proxima family-holidays__pr">Arrive:</span> '. $arrival.'</div>
                                 <div class="col-sm-7"><span class="proxima">Depart:</span> '. $departure .'</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">'.$rate_explanation.'</div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-7 family-holidays__pr"><span class="proxima">Adults:</span> '.$adult_rate.'</div>
@@ -204,7 +208,10 @@ if( have_rows('flex_content') ):
                 if ( have_rows('table')) :
                     while ( have_rows ('table')) : the_row();
                     $heading = get_sub_field('heading');
-                    echo '<div class="row"><div class="col-sm-12 no-padding"><h2 class="blue proxima">' . $heading . '</h2></div>';
+                    $sub_heading = get_sub_field('sub_heading');
+                    echo '<div class="row"><div class="col-sm-12 no-padding"><h2 class="blue proxima">' . $heading . '</h2>';
+                        if ( $sub_heading ) { echo '<p class="subhead">'.$sub_heading.'</p>'; }
+                        echo '</div>';
                         // count how many cells we're working with
                         $count = count(get_sub_field('cells'));
                         // calculate the half way point
