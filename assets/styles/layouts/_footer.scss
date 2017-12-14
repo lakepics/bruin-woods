@@ -1,98 +1,120 @@
-//
 // Footer Styles
-//
-// 0up
+//mobile footer - singh
+.footer {
+  background: $light-blue; // background-image: url('#{$document-root}/wp-content/themes/bw/dist/images/mountain3.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  overflow: hidden;
+  border-top: 4px solid $white;
+  color:    $white;
+  &__logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 200px;
+    padding: 30px 0px 20px 0px;
+  }
+  p {
+    display: inline-block;
+    padding-left: 5px;
+    &.phone {
+      margin-bottom: 1em;
+    }
+  }
+}
+
 // Extra Small Devices, Phones
 @media only screen and (min-width: $extra-small-container-width) {}
 
 // Small Devices, Tablets
 @media only screen and (min-width: $small-container-width) {
-    .footer {
-        height: 440px;
-        min-height: 440px;
-        background: $light-blue;
-        // background-image: url('#{$document-root}/wp-content/themes/bw/dist/images/mountain3.svg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center bottom;
-        overflow: hidden;
-        border-top: 4px solid $white;
-        >.container {
-            height: 440px;
-        }
-        &__column {
-            color: $white;
-            z-index: 100;
-            margin-top: 100px;
-            h3 {
-                margin-top: 70px;
-            }
-        }
-        &__register {
-            display: block;
-            background-image: url('#{$document-root}/wp-content/themes/bw/dist/images/register-badge2.svg');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
-            img {
-                height: 180px;
-                display: block;
-                margin: 0 auto;
-            }
-            h3 {
-                line-height: 180px;
-            }
-            a {
-                text-decoration: none;
-                color: $white;
-            }
-        }
-        &__logo {
-            display: block;
-            margin-bottom: 50px;
-            img {
-                height: 150px;
-                display: block;
-            }
-        }
-        &__register {
-            margin-top: 70px;
-        }
-        &__social-icon a i {
-            margin-right: .5em;
-            color: $white;
-        }
-        h3 {
-            text-transform: uppercase;
-            font-size: 1.25em;
-            font-family: $semibold-sans-serif;
-            letter-spacing: 0.0625em;
-        }
-        p {
-            display: inline-block;
-            padding-left: 5px;
-            &.phone {
-                margin-bottom: 1em;
-            }
-        }
-        .fa-1-5x {
-            font-size: 1.5em !important;
-        }
-        .boiler {
-            color: $white;
-            font-size: .65em;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 0.0625em;
-            a {
-                color: $white;
-                text-decoration: none;
-                &::before {
-                    content: '\00a0 \00a0 | \00a0 \00a0';
-                }
-            }
-        }
+  .footer {
+    height: 440px;
+    min-height: 440px;
+    background: $light-blue; // background-image: url('#{$document-root}/wp-content/themes/bw/dist/images/mountain3.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    overflow: hidden;
+    border-top: 4px solid $white;
+    >.container {
+      height: 440px;
     }
+    &__column {
+      color: $white;
+      z-index: 100;
+      margin-top: 100px;
+      h3 {
+        margin-top: 70px;
+      }
+    }
+    &__register {
+      display: block;
+      background-image: url('#{$document-root}/wp-content/themes/bw/dist/images/register-badge2.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      img {
+        height: 180px;
+        display: block;
+        margin: 0 auto;
+      }
+      h3 {
+        line-height: 180px;
+      }
+      a {
+        text-decoration: none;
+        color: $white;
+      }
+    }
+    &__logo {
+      display: block;
+      margin-bottom: 50px;
+      img {
+        height: 150px;
+        display: block;
+      }
+    }
+    &__register {
+      margin-top: 70px;
+    }
+    &__social-icon a i {
+      margin-right: .5em;
+      color: $white;
+    }
+    h3 {
+      text-transform: uppercase;
+      font-size: 1.25em;
+      font-family: $semibold-sans-serif;
+      letter-spacing: 0.0625em;
+    }
+    p {
+      display: inline-block;
+      padding-left: 5px;
+      &.phone {
+        margin-bottom: 1em;
+      }
+    }
+    .fa-1-5x {
+      font-size: 1.5em !important;
+    }
+    .boiler {
+      color: $white;
+      font-size: .65em;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.0625em;
+      a {
+        color: $white;
+        text-decoration: none;
+        &::before {
+          content: '\00a0 \00a0 | \00a0 \00a0';
+        }
+      }
+    }
+  }
 }
 
 // Medium Devices, Desktops
