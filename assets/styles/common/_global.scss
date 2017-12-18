@@ -71,6 +71,10 @@ p {
     padding: 0!important;
 }
 
+@media (max-width: $small-container-width)
+body {
+    padding-top: 54px;
+}
 // Extra Small Devices, Phones
 @media only screen and (min-width: $extra-small-container-width) {}
 

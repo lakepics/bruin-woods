@@ -19,7 +19,7 @@ if( have_rows('page_content') ):
 
               echo '<div class="container">
                     <div class="row front-page__content">
-                        <div class="col-12 text-center front-page__heading">
+                        <div class="col-md-12 text-center front-page__heading">
                             <h2 class="blue antiqua">' .
                             get_sub_field('h2_antiqua') .
                             '<span class="proxima gold"> ' .
@@ -28,7 +28,7 @@ if( have_rows('page_content') ):
                             </h2>
                         </div>';
 
-                    echo '<div class="col-12">' .
+                    echo '<div class="col-md-12">' .
                             get_sub_field('full_width_text_column') .
                          '</div>';
 
