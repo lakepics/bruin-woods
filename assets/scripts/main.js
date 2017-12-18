@@ -34,13 +34,10 @@
                     autoplay: true,
                     adaptiveHeight: true,
                     autoplaySpeed: 4000,
-                    nextArrow: '<i class="fa fa-angle-right fa-3x" aria-hidden="true"></i>',
-                    prevArrow: '<i class="fa fa-angle-left fa-3x" aria-hidden="true"></i>',
-                    appendArrows: $('.hero-slider__overlay-wrapper'),
-                    appendDots: $('.hero-slider__overlay-wrapper'),
-                    mobileFirst: true,
+                    arrows: false,
                     dots: true,
-                    arrows: true,
+                    appendDots: $('.hero-slider__nav'),
+                    mobileFirst: true,
                     fade: true
                 });
             },

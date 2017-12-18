@@ -85,8 +85,8 @@
             }
             .slick-dots {
                 position: absolute;
-                left: 37%;
-                bottom: 30px;
+                left: 35%;
+                bottom: 25px;
                 margin-left: auto;
                 margin-right: auto;
                 z-index: 4001;
@@ -97,13 +97,19 @@
                     list-style: none;
                     display: inline-block;
                     margin-right: 20px;
-                    width: 10px;
-                    height: 10px;
-                    border-radius: 10px;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 20px;
                     border: 1px solid hsla(0, 0%, 100%, .5);
                     background-color: hsla(0, 0%, 100%, .5);
                 }
             }
+            /*.slick-active {
+                    li {
+                        border-color: $brand-gold;
+                        background-color: $brand-gold;
+                }
+            } */
         }
     }
 

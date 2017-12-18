@@ -133,8 +133,8 @@ if( have_rows('flex_content') ):
                                     elseif ( $holiday_full == true ) {
                                         echo '<div class="row"><div class="col-sm-12 family-holidays__notice">'.$notice.'</div></div>';
                                         }
-                                    elseif ( $program_charts_url !== '' ) {
-                                        echo '<div class="row"><div class="col-sm-12"><a class="button button--blue" href="'.$program_charts_url.'">Download Program Chart &nbsp; <span class="fa fa-download" aria-hidden="true"></span></a></div></div>';
+                                    if ( !empty($program_charts_url) ) {
+                                        echo '<div class="row"><div class="col-sm-12"><a class="button button--blue" target="_blank" href="'.$program_charts_url.'">Download Program Chart &nbsp; <span class="fa fa-download" aria-hidden="true"></span></a></div></div>';
                                     }
                         echo '
                         </div>
@@ -146,7 +146,7 @@ if( have_rows('flex_content') ):
 
                         <div class="col-sm-7 text-right">
                             <h2 class="blue antiqua">' . $holiday_name . '<span class="gold proxima">' .
-                            $holiday_dates . $program_charts_url . '</span></h2>
+                            $holiday_dates.'</span></h2>
                        <div class="row">
                                 <div class="col-sm-7 col-sm-offset-5 text-right"><span class="proxima">Arrive:</span> '. $arrival.'</div>
                                 <div class="col-sm-7 col-sm-offset-5 text-right"><span class="proxima">Depart:</span> '. $departure .'</div>
@@ -162,8 +162,8 @@ if( have_rows('flex_content') ):
                                     elseif ( $holiday_full == true ) {
                                         echo '<div class="row"><div class="col-sm-12 family-holidays__notice">'.$notice.'</div></div>';
                                         }
-                                    elseif ( !empty($program_charts_url) ) {
-                                        echo '<div class="row"><div class="col-sm-12 text-right"><a class="button button--blue" href="'.$program_charts_url.'">Download Program Chart &nbsp; <span class="fa fa-chevron-right" aria-hidden="true"></span></a></div></div>';
+                                    if ( !empty($program_charts_url) ) {
+                                        echo '<div class="row"><div class="col-sm-12 text-right"><a class="button button--blue" target="_blank" href="'.$program_charts_url.'">Download Program Chart &nbsp; <span class="fa fa-chevron-right" aria-hidden="true"></span></a></div></div>';
                                     }
             }
 

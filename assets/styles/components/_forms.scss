@@ -20,6 +20,26 @@
 // 0up
 
 
+#field_1_31 {
+    float: right;
+    clear: none;
+    tbody {
+        font-size: .9em;
+    }
+    th {
+        padding-bottom: 10px;
+    }
+    td {
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+    }
+}
+
+input#gform_submit_button_1.gform_button.button {
+    background-color: transparent;
+    color: $brand-primary;
+    border: 1px solid $brand-primary;
+}
 // Extra Small Devices, Phones
 @media only screen and (min-width: $extra-small-container-width) {}
 
