@@ -91,10 +91,12 @@
         columnWidth: '.grid-sizer',
         percentPosition: true
     });
-// layout Masonry after each image loads
-$gallery.imagesLoaded().progress( function() {
-  $gallery.masonry('layout');
-});
-
+    // layout Masonry after each image loads
+    $gallery.imagesLoaded().progress(function () {
+        $gallery.masonry('layout');
+    });
+    // remove background images on mobile
+    var viewportWidth = $(window).width();
+    if (viewportWidth < 768 ) { $(".content-section__background-image, .table-section__background-image, .family-holidays__background-image").removeAttr("style"); }
 
 })(jQuery); // Fully reference jQuery after this point.
