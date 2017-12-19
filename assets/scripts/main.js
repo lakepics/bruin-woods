@@ -97,6 +97,9 @@
     });
     // remove background images on mobile
     var viewportWidth = $(window).width();
-    if (viewportWidth < 768 ) { $(".content-section__background-image, .table-section__background-image, .family-holidays__background-image").removeAttr("style"); }
+    if (viewportWidth < 768 ) {
+        $(".content-section__background-image, .table-section__background-image, .family-holidays__background-image").removeAttr("style");
+        $(".table-section .no-padding").removeClass("no-padding");
+    }
 
 })(jQuery); // Fully reference jQuery after this point.

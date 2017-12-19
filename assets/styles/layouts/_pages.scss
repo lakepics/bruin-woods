@@ -2,51 +2,75 @@
 // Page Styles
 //
 // 0up
-
 .masonry-grid {
-
     margin-top: 144px;
     margin-left: 4px;
 }
 
 .grid {
-  background: #EEE;
-
+    background: #EEE;
 }
+
 
 /* clearfix */
+
 .grid:after {
-  content: '';
-  display: block;
-  clear: both;
+    content: '';
+    display: block;
+    clear: both;
 }
+
 
 /* ---- grid-item ---- */
 
 .grid-sizer,
 .grid-item {
-  width: calc( 100% / 12 );
+    width: calc( 100% / 12);
 }
 
 .grid-item {
-  height: auto;
-  float: left;
+    height: auto;
+    float: left;
     margin-bottom: 4px;
     // 100% / 6 for six double width columns, plus 4px for the gutter would have been in the middle, minus 4px for gutters
-    &--w2h1, &--w2h2, &--w2h3 {
-       // current width: calc( ( 100% / 6 ) );
-        width: calc( (100% / 6) - 4px );
+    &--w2h1,
+    &--w2h2,
+    &--w2h3 {
+        // current width: calc( ( 100% / 6 ) );
+        width: calc( (100% / 6) - 4px);
     }
-    &--w3h2, &--w3h3 {
+    &--w3h2,
+    &--w3h3 {
         // 100% / 4 (12 / 3 = 4) for 4 triple width columns, plus 8px for the two gutters in the middle, minus 4px for gutters
         // current width: calc( ( 100% / 4 ) );
-        width: calc( (100% / 4) - 4px );
+        width: calc( (100% / 4) - 4px);
     }
     img {
         width: 100%;
     }
 }
 
+.section-type {
+   // display: none;
+}
+
+.table-section {
+    &__background-image {
+        border-top: 2px solid $brand-primary;
+        border-bottom: 2px solid $brand-primary;
+        background-color: rgba(0, 165, 229, .1);
+    }
+    &__row {
+        border-top: 1px solid $white;
+        &:last-of-type {
+            border-bottom: 1px solid $white;
+        }
+    }
+}
+
+.cell {
+    padding: 20px 8px;
+}
 
 // Extra Small Devices, Phones
 @media only screen and (min-width: $extra-small-container-width) {}

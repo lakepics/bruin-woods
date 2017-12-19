@@ -224,7 +224,7 @@ if( have_rows('flex_content') ):
                             $left_cell = get_sub_field('left_cell');
                             $right_cell = get_sub_field('right_cell');
                             // layout table below
-                                echo '<div class="row table-section__row"><div class="col-sm-7 cell cell--reverse cell--left">' . $left_cell . '</div><div class="col-sm-5 cell cell--right">' . $right_cell . '</div></div>';
+                                echo '<div class="row table-section__row"><div class="col-xs-7 cell cell--reverse cell--left">' . $left_cell . '</div><div class="col-xs-5 cell cell--right">' . $right_cell . '</div></div>';
                                 if ( $i == $half ) { echo '</div><div class="col-sm-6 cell__wrapper">'; }
                             $i++;
                             endwhile;
@@ -264,7 +264,7 @@ if( have_rows('flex_content') ):
                             $left_cell = get_sub_field('left_cell');
                             $right_cell = get_sub_field('right_cell');
                             // layout table below
-                                echo '<div class="row table-section__row"><div class="col-sm-7 cell cell--reverse cell--left">' . $left_cell . '</div><div class="col-sm-5 cell cell--right">' . $right_cell . '</div></div>';
+                                echo '<div class="row table-section__row"><div class="col-xs-7 cell cell--reverse cell--left">' . $left_cell . '</div><div class="col-xs-5 cell cell--right">' . $right_cell . '</div></div>';
                                 if ( $i == $half ) { echo '</div><div class="col-sm-6 cell__wrapper">'; }
                             $i++;
                             endwhile;
