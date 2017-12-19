@@ -7,7 +7,7 @@
   background-position: center bottom;
   overflow: hidden;
   border-top: 4px solid $white;
-  color:    $white;
+  color: $white;
   &__logo {
     display: block;
     margin-left: auto;
@@ -25,6 +25,190 @@
   }
 }
 
+
+//mobile footer - Singh
+//0px - 768px
+@media (max-width: $small-container-width) {
+  .desktop-footer {
+    display: none;
+  }
+  .mobile-footer {
+    width: 100%;
+    height: 200px;
+    min-height: 100px;
+    background-image: url(http://bruinwoods-dev.hhs.ucla.edu/wp-content/themes/bw/dist/images/footer_svg_bg.png);
+    background-size: 100% 100%;
+    bottom: 0px;
+    background-repeat: no-repeat;
+    padding: 0px;
+    &__social {
+      padding: 15px 15px;
+      text-align: center;
+      height: 40%;
+      width: 100%;
+      &__left {
+        display: inline-block;
+        width: 33%;
+        margin: 0 auto;
+        font-size: 35px;
+        float: left;
+      }
+      &__center {
+        display: inline-block;
+        width: 33%;
+        margin: 0 auto;
+        font-size: 2em;
+        float: left;
+      }
+      &__right {
+        display: inline-block;
+        width: 33%;
+        margin: 0 auto;
+        font-size: 2em;
+        float: left;
+      }
+    }
+    &__contact {
+      height: 66%;
+      width: 100%;
+
+      &__email {
+        display: inline-block;
+        width: 33%;
+        margin: 0 auto;
+        font-size: 35px;
+        float: left;
+        cursor: pointer;
+        position: relative;
+        text-align: center;
+      }
+      &__register {
+        display: inline-block;
+        width: 33%;
+        margin: 0 auto;
+        font-size: 35px;
+        float: left;
+        cursor: pointer;
+        position: relative;
+        text-align: center;
+      }
+      &__call {
+        display: inline-block;
+        width: 33%;
+        margin: 0 auto;
+        font-size: 35px;
+        float: left;
+        cursor: pointer;
+        position: relative;
+        text-align: center;
+      }
+    }
+    a {
+      color: #fff;
+    }
+  }
+}
+
+//right icon
+.contact-mobile-right-icon {
+  background: #666;
+  background: rgb(0, 165, 229);
+  border-radius: 100%;
+  border: 3px solid #fff;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
+  color: #32b7ea;
+  display: table;
+  margin: 0 auto;
+  font-size: 1.1em;
+  height: 30px;
+  padding: 15px 18px;
+  text-align: center;
+  transition: .5s;
+  vertical-align: middle;
+  width: 30px;
+margin-top: 20px;
+}
+
+.contact-mobile-right-icon:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.custom-icon-center {
+  background: rgb(0, 165, 229);
+  border-radius: 100%;
+  border: 3px solid #fff;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
+  color: #32b7ea;
+  display: table;
+  margin: 0 auto;
+  font-size: 1.1em;
+  height: 30px;
+  padding: 33px 32px;
+  text-align: center;
+  transition: .5s;
+  vertical-align: middle;
+  width: 30px;
+}
+
+.custom-icon-center:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+
+//left icon
+.contact-mobile-left-icon {
+  background: #666;
+  background: rgb(0, 165, 229);
+  border-radius: 100%;
+  border: 3px solid #fff;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
+  color: #32b7ea;
+  display: table;
+  margin: 0 auto;
+  font-size: 1.1em;
+  height: 30px;
+  padding: 15px;
+  text-align: center;
+  transition: .5s;
+  vertical-align: middle;
+  width: 30px;
+margin-top: 20px;
+}
+
+.contact-mobile-left-icon:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.icon-text {
+  display: inline;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.icon-wrapper {
+  position: relative;
+  display: block;
+}
+
+.fix-editor {
+  display: none;
+}
+
+//768px ++
+@media (min-width: $small-container-width) {
+  .mobile-footer {
+    display: none;
+  }
+}
+
+
+//end singh mobile edits
 // Extra Small Devices, Phones
 @media only screen and (min-width: $extra-small-container-width) {}
 

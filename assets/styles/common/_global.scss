@@ -3,25 +3,27 @@
 //
 // 0up
 h1 {
-    font-family: $serif;
+  font-family: $serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 2.625em;
+  text-transform: uppercase;
+  color: $brand-primary;
+  line-height: 1.1em;
+  >span {
+    display: block;
+    font-family: $sans-serif;
     font-weight: 400;
     font-style: italic;
     font-size: 2em;
+
     text-transform: uppercase;
-    color: $brand-primary;
-    line-height: 1.1em;
-    >span {
-        display: block;
-        font-family: $sans-serif;
-        font-weight: 400;
-        font-size: 1em;
-        font-style: normal;
-        text-transform: uppercase;
-        color: $brand-gold;
-    }
+    color: $brand-gold;
+  }
 }
 
 h2 {
+
     font-size: 1.15em;
     line-height: 1.15em;
     >span {
@@ -31,49 +33,56 @@ h2 {
 
 p,
 li {
-    font-family: $light-sans-serif;
-    font-weight: 300;
-    font-size: 1em;
-    line-height: 1.85em;
+  font-family: $light-sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.85em;
 }
 
 p {
-    margin-bottom: 1.65em;
+  margin-bottom: 1.65em;
 }
 
 .antiqua {
-    font-family: $serif;
-    font-weight: 400;
-    font-style: italic;
-    text-transform: uppercase;
-    letter-spacing: 0.0375em;
+  font-family: $serif;
+  font-weight: 400;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 0.0375em;
 }
 
 .proxima {
-    font-family: $semibold-sans-serif;
-    font-weight: 600;
-    font-style: normal;
-    text-transform: uppercase;
-    letter-spacing: 0.0625em;
+  font-family: $semibold-sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.0625em;
 }
 
 .blue {
-    color: $brand-primary;
+  color: $brand-primary;
 }
 
 .gold {
-    color: $brand-gold;
+  color: $brand-gold;
 }
 
 .white {
-    color: $white;
+  color: $white;
 }
 
 .no-padding {
-    padding: 0!important;
+  padding: 0!important;
 }
 
 @media (max-width: $small-container-width) {
+.home {
+    padding-top: 0px;
+}
+  body {
+    padding-top: 54px;
+  }
+
     body {
         margin-top: 54px;
     }
@@ -84,6 +93,7 @@ p {
 
 // Small Devices, Tablets
 @media only screen and (min-width: $small-container-width) {
+
     body {
         font-size: 12px;
     }
@@ -97,17 +107,17 @@ p {
 
 // Medium Devices, Desktops
 @media only screen and (min-width: $medium-container-width) {
-    body {
-        font-size: 14px;
-    }
+  body {
+    font-size: 14px;
+  }
 }
 
 // Large Devices, Wide Screens
 @media only screen and (min-width: $large-container-width) {
-    body {
-        font-size: 18px;
-    }
-    .container {
-        max-width: $large-container-width;
-    }
+  body {
+    font-size: 18px;
+  }
+  .container {
+    max-width: $large-container-width;
+  }
 }

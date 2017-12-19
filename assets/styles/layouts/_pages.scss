@@ -2,6 +2,8 @@
 // Page Styles
 //
 // 0up
+
+
 .masonry-grid {
     margin-top: 144px;
     margin-left: 4px;
@@ -74,6 +76,20 @@
 
 // Extra Small Devices, Phones
 @media only screen and (min-width: $extra-small-container-width) {}
+
+
+//Homepage  - Singh
+//0px - 768px
+@media (max-width: $small-container-width) {
+  .homepage__button {
+    margin: 0px 0px 20px 0px !important;
+  }
+  .button--round {
+    margin:  15px auto;
+  }
+}
+
+
 
 // Small Devices, Tablets
 @media only screen and (min-width: $small-container-width) {
