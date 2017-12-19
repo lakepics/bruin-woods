@@ -14,19 +14,21 @@ h1 {
     display: block;
     font-family: $sans-serif;
     font-weight: 400;
-    font-size: 1em;
-    font-style: normal;
+    font-style: italic;
+    font-size: 2em;
+
     text-transform: uppercase;
     color: $brand-gold;
   }
 }
 
 h2 {
-  font-size: 1.75em;
-  line-height: 1.15em;
-  >span {
-    display: block;
-  }
+
+    font-size: 1.15em;
+    line-height: 1.15em;
+    >span {
+        display: block;
+    }
 }
 
 p,
@@ -80,6 +82,10 @@ p {
   body {
     padding-top: 54px;
   }
+
+    body {
+        margin-top: 54px;
+    }
 }
 
 // Extra Small Devices, Phones
@@ -87,9 +93,16 @@ p {
 
 // Small Devices, Tablets
 @media only screen and (min-width: $small-container-width) {
-  body {
-    font-size: 12px;
-  }
+
+    body {
+        font-size: 12px;
+    }
+    h1 {
+        font-size: 2.625em;
+    }
+    h2 {
+        font-size: 1.75em;
+    }
 }
 
 // Medium Devices, Desktops
