@@ -1,7 +1,17 @@
-//
-// Page Styles
-//
-// 0up
+
+//Homepage  - Singh 
+//0px - 768px
+@media (max-width: $small-container-width) {
+  .homepage__button {
+    margin: 0px 0px 20px 0px !important;
+  }
+  .button--round {
+    margin:  15px auto;
+  }
+}
+
+
+
 
 .masonry-grid {
 
