@@ -21,12 +21,12 @@
                 height: 100%;
                 padding: 15px;
                 background: rgba(0, 165, 229, 1);
-                background: -moz-linear-gradient(left, rgba(0, 165, 229, .8) 0%, rgba(0, 255, 255, 0.65) 100%);
-                background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0, 165, 229, .8)), color-stop(100%, rgba(0, 255, 255, 0.65)));
-                background: -webkit-linear-gradient(left, rgba(0, 165, 229, .8) 0%, rgba(0, 255, 255, 0.65) 100%);
-                background: -o-linear-gradient(left, rgba(0, 165, 229, .8) 0%, rgba(0, 255, 255, 0.65) 100%);
-                background: -ms-linear-gradient(left, rgba(0, 165, 229, .8) 0%, rgba(0, 255, 255, 0.65) 100%);
-                background: linear-gradient(to right, rgba(0, 165, 229, .8) 0%, rgba(0, 255, 255, 0.65) 100%);
+                background: -moz-linear-gradient(left, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
+                background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0, 165, 229, .9)), color-stop(100%, rgba(0, 255, 255, 0.75)));
+                background: -webkit-linear-gradient(left, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
+                background: -o-linear-gradient(left, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
+                background: -ms-linear-gradient(left, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
+                background: linear-gradient(to right, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a5e5', endColorstr='#00ffff', GradientType=1);
                 z-index: 2000;
             }
@@ -53,6 +53,8 @@
                     font-size: 1.1em;
                     line-height: 2em;
                     text-align: left;
+                    font-family: $sans-serif;
+                    font-weight: 400;
                 }
                 a {
                     display: block;
@@ -157,6 +159,8 @@
                     font-size: 1.1em;
                     line-height: 2em;
                     text-align: left;
+                    font-family: $light-sans-serif;
+                    font-weight: 300;
                 }
                 a {
                     display: block;

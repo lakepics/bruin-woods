@@ -56,6 +56,10 @@
     &__heading {
         h2 {
             font-size: 1.6em;
+            .proxima {
+                font-family: $sans-serif;
+                font-weight: 400;
+            }
         }
     }
     &__content {
@@ -377,6 +381,7 @@
         font-weight: 300;
         line-height: 2em;
         &__background-image {
+            margin-top: 0;
             background-position: center top;
             background-size: cover;
             background-repeat: no-repeat;

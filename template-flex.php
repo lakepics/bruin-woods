@@ -171,7 +171,7 @@ if( have_rows('flex_content') ):
                                     }
             }
 
-            echo '   </div>
+            echo '   </div></div>
                 </div>
             </div>';
 

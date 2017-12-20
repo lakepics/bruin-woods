@@ -102,5 +102,9 @@
         $(".table-section .no-padding").removeClass("no-padding");
         $(".family-holidays div.text-right").removeClass("text-right").addClass("text-left");
     }
+    // fade section label on scroll
+    $(window).scroll(function(){
+    $(".section-type").css("opacity", .1 - $(window).scrollTop() / 5000);
+    });
 
 })(jQuery); // Fully reference jQuery after this point.
