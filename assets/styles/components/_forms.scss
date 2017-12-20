@@ -32,8 +32,15 @@
     td {
         padding: 5px 10px;
         border: 1px solid #ccc;
+        &.column-1, &.column-3 {
+            border-right: 0px;
+        }
+        &.column-2, &.column-4 {
+            border-left: 0px;
+        }
     }
 }
+#field_1_27 .desc-heading { font-size: 18px;}
 
 input#gform_submit_button_1.gform_button.button {
     background-color: transparent;

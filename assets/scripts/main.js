@@ -100,6 +100,7 @@
     if (viewportWidth < 768 ) {
         $(".content-section__background-image, .table-section__background-image, .family-holidays__background-image").removeAttr("style");
         $(".table-section .no-padding").removeClass("no-padding");
+        $(".family-holidays div.text-right").removeClass("text-right").addClass("text-left");
     }
 
 })(jQuery); // Fully reference jQuery after this point.

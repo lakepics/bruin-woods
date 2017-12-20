@@ -43,9 +43,10 @@ if( have_rows('page_content') ):
                     $link = get_sub_field('round_button');
 
 					echo '<div class="front-page__columns col-sm-4">
-                            <h3>' . $heading . '</h3>' .
+                            <span class="hidden-xs"><h3>' . $heading . '</h3>' .
                             $copy .
-                            '<a class="button button--round button--blue" href="' . $link['url'] . '">' . $link['title'] . '</a>
+                            '<a class="button button--round button--blue" href="' . $link['url'] . '">' . $link['title'] . '</a></span>
+                            <span class="visible-xs"><a class="button button--blue button--mobile-full-width" href="' . $link['url'] . '">' . $heading . ' <span class="fa fa-chevron-right pull-right" aria-hidden="true"></span></a></span>
                           </div>';
 
 				endwhile;

@@ -4,8 +4,8 @@
 // 0up
 .button {
     display: inline-block;
-    margin: 30px auto 0;
-    padding: 10px 20px;
+    margin: 15px auto 0;
+    padding: 10px 15px;
     border: 1px solid $white;
     color: $white;
     letter-spacing: .25em;
@@ -28,6 +28,14 @@
         margin-left: auto;
         margin-right: auto;
     }
+    &--mobile-full-width {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 15px;
+        span {
+            line-height: 1.4em;
+        }
+    }
     &:hover {
         text-decoration: none;
         border: 1px solid $brand-gold;
@@ -42,7 +50,15 @@
 @media only screen and (min-width: $extra-small-container-width) {}
 
 // Small Devices, Tablets
-@media only screen and (min-width: $small-container-width) {}
+@media only screen and (min-width: $small-container-width) {
+    .button {
+        padding: 10px 20px;
+        margin-top: 30px;
+        &--round {
+            padding: 28px 20px;
+        }
+    }
+}
 
 // Medium Devices, Desktops
 @media only screen and (min-width: $medium-container-width) {}

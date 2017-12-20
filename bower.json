@@ -8,7 +8,7 @@
     "private": true,
     "dependencies": {
         "font-awesome": "^4.7.0",
-        "popper.js": "~1.13.0-next",
+        "popper.js": "~1.12.9",
         "fancybox": "~3.2.5",
         "isotope": "^3.0.4",
         "slick-carousel": "~1.8.1",

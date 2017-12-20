@@ -121,20 +121,20 @@ if( have_rows('flex_content') ):
                                 <div class="col-sm-7"><span class="proxima">Depart:</span> '. $departure .'</div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-12">'.$rate_explanation.'</div>
-                            </div>
-                            <div class="row">
                                 <div class="col-sm-7 family-holidays__pr"><span class="proxima">Adults:</span> '.$adult_rate.'</div>
                                 <div class="col-sm-7 family-holidays__pr"><span class="proxima">3 Years Old — 10<sup>th</sup> Grade:</span> '.$ya_rate.'</div>
-                                <div class="col-sm-7 text-left"><span class="proxima">Under 3 Years Old:</span> '.$child_rate.'</div></div>';
+                                <div class="col-sm-7 text-left"><span class="proxima">Under 3 Years Old:</span> '.$child_rate.'</div></div>
+                            <div class="row">
+                                <div class="col-sm-12 rate-ex">'.$rate_explanation.'</div>
+                            </div>';
                                      if ( $holiday_full == false ) {
-                                        echo '<div class="row"><div class="col-sm-12"><a class="button button--blue" href="/family-holidays/apply/">Apply Today! &nbsp; <span class="fa fa-chevron-right" aria-hidden="true"></span></a></div></div>';
+                                        echo '<div class="row apply"><div class="col-sm-12"><a class="button button--blue" href="/family-holidays/apply/">Apply Today! &nbsp; <span class="fa fa-chevron-right" aria-hidden="true"></span></a></div></div>';
                                         }
                                     elseif ( $holiday_full == true ) {
-                                        echo '<div class="row"><div class="col-sm-12 family-holidays__notice">'.$notice.'</div></div>';
+                                        echo '<div class="row"><div class="col-sm-12 family-holidays__notice"><p>'.$notice.'</p></div></div>';
                                         }
                                     if ( !empty($program_charts_url) ) {
-                                        echo '<div class="row"><div class="col-sm-12"><a class="button button--blue" target="_blank" href="'.$program_charts_url.'">Download Program Chart &nbsp; <span class="fa fa-download" aria-hidden="true"></span></a></div></div>';
+                                        echo '<div class="row prog-charts"><div class="col-sm-12"><a class="button button--blue" target="_blank" href="'.$program_charts_url.'">Download Program Chart &nbsp; <span class="fa fa-download" aria-hidden="true"></span></a></div></div>';
                                     }
                         echo '
                         </div>
@@ -155,15 +155,19 @@ if( have_rows('flex_content') ):
                                 <div class="col-sm-7 col-sm-offset-5 text-right"><span class="proxima">Adults:</span> '.$adult_rate.'</div>
                                 <div class="col-sm-7 col-sm-offset-5 text-right"><span class="proxima">3 Years Old — 10<sup>th</sup> Grade:</span> '.$ya_rate.'</div>
                                 <div class="col-sm-7 col-sm-offset-5 text-right"><span class="proxima">Under 3 Years Old:</span> '.$child_rate.'</div>
-                            </div></div>';
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 rate-ex">'.$rate_explanation.'</div>
+                            </div>';
+
                                     if ( $holiday_full == false ) {
-                                        echo '<div class="row"><div class="col-sm-12 text-right"><a class="button button--blue" href="/family-holidays/apply/">Apply Today! &nbsp; <span class="fa fa-chevron-right" aria-hidden="true"></span></a></div></div>';
+                                        echo '<div class="row apply"><div class="col-sm-12 text-right"><a class="button button--blue" href="/family-holidays/apply/">Apply Today! &nbsp; <span class="fa fa-chevron-right" aria-hidden="true"></span></a></div></div>';
                                         }
                                     elseif ( $holiday_full == true ) {
                                         echo '<div class="row"><div class="col-sm-12 family-holidays__notice">'.$notice.'</div></div>';
                                         }
                                     if ( !empty($program_charts_url) ) {
-                                        echo '<div class="row"><div class="col-sm-12 text-right"><a class="button button--blue" target="_blank" href="'.$program_charts_url.'">Download Program Chart &nbsp; <span class="fa fa-chevron-right" aria-hidden="true"></span></a></div></div>';
+                                        echo '<div class="row prog-charts"><div class="col-sm-12 text-right"><a class="button button--blue" target="_blank" href="'.$program_charts_url.'">Download Program Chart &nbsp; <span class="fa fa-download" aria-hidden="true"></span></a></div></div>';
                                     }
             }
 
@@ -209,7 +213,7 @@ if( have_rows('flex_content') ):
                     while ( have_rows ('table')) : the_row();
                     $heading = get_sub_field('heading');
                     $sub_heading = get_sub_field('sub_heading');
-                    echo '<div class="row"><div class="col-sm-12 no-padding"><h2 class="blue proxima">' . $heading . '</h2>';
+                    echo '<div class="row"><div class="col-sm-12 no-padding table-section__header"><h2 class="blue proxima">' . $heading . '</h2>';
                         if ( $sub_heading ) { echo '<p class="subhead">'.$sub_heading.'</p>'; }
                         echo '</div>';
                         // count how many cells we're working with
@@ -251,7 +255,7 @@ if( have_rows('flex_content') ):
                 if ( have_rows('table')) :
                     while ( have_rows ('table')) : the_row();
                     $heading = get_sub_field('heading');
-                    echo '<div class="row"><div class="col-sm-12 no-padding"><h2 class="blue proxima">' . $heading . '</h2></div>';
+                    echo '<div class="row"><div class="col-sm-12 no-padding table-section__header"><h2 class="blue proxima">' . $heading . '</h2></div>';
                         // count how many cells we're working with
                         $count = count(get_sub_field('cells'));
                         // calculate the half way point

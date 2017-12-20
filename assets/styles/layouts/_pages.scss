@@ -2,10 +2,8 @@
 // Page Styles
 //
 // 0up
-
-
 .masonry-grid {
-    margin-top: 144px;
+    margin-top: 54px;
     margin-left: 4px;
 }
 
@@ -27,72 +25,182 @@
 
 .grid-sizer,
 .grid-item {
-    width: calc( 100% / 12);
+    width: 100%
 }
 
 .grid-item {
     height: auto;
     float: left;
     margin-bottom: 4px;
-    // 100% / 6 for six double width columns, plus 4px for the gutter would have been in the middle, minus 4px for gutters
     &--w2h1,
     &--w2h2,
     &--w2h3 {
-        // current width: calc( ( 100% / 6 ) );
-        width: calc( (100% / 6) - 4px);
+        width: 100%;
     }
     &--w3h2,
     &--w3h3 {
-        // 100% / 4 (12 / 3 = 4) for 4 triple width columns, plus 8px for the two gutters in the middle, minus 4px for gutters
-        // current width: calc( ( 100% / 4 ) );
-        width: calc( (100% / 4) - 4px);
+        width: 100%;
     }
     img {
         width: 100%;
     }
 }
 
+.front-page {
+    &__softbox {
+        display: inline-block;
+        background: rgba(255, 255, 255, .5);
+        margin: 0px -15px;
+        padding: 30px;
+    }
+    &__heading {
+        h2 {
+            font-size: 1.6em;
+        }
+    }
+    &__content {
+        margin-bottom: 15px;
+    }
+}
+
 .section-type {
-   // display: none;
+    display: none;
 }
 
 .table-section {
     &__background-image {
         border-top: 2px solid $brand-primary;
         border-bottom: 2px solid $brand-primary;
-        background-color: rgba(0, 165, 229, .1);
+    }
+    &__header {
+        padding-top: 1px;
+        padding-bottom: 1px;
+        background-color: rgba(0, 165, 229, .2);
     }
     &__row {
         border-top: 1px solid $white;
         &:last-of-type {
             border-bottom: 1px solid $white;
         }
+        .cell {
+            background-color: rgba(0, 165, 229, .1);
+            font-family: $light-sans-serif;
+        }
     }
 }
 
 .cell {
-    padding: 20px 8px;
+    padding: 10px 15px;
+}
+
+.content-section {
+    &__background-image {
+        border-top: 4px solid rgba(254, 187, 54, .5);
+    }
+}
+
+.activities-grid {
+    .image-wrapper {
+        position: relative;
+        border-bottom: 3px solid $white;
+        img {
+            width: 100%;
+            overflow: hidden;
+        }
+    }
+    .mountain-background {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+        background-image: url('#{$document-root}/wp-content/themes/bw/dist/images/activites-mountain-background.png');
+        background-position: left;
+        height: 180px;
+        width: 100%;
+        z-index: 1000;
+        p {
+            position: absolute;
+            bottom: 0;
+            left: 20px;
+            right: 0;
+            margin-bottom: 0;
+            font-family: $serif;
+            font-size: 2em;
+            color: $white;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.family-holidays {
+    font-family: $light-sans-serif;
+    font-weight: 300;
+    &__background-image {
+        border-top: 4px solid rgba(254, 187, 54, .5);
+        margin-top: 15px;
+    }
+    h2 {
+        font-size: 1.7em;
+        span {
+        font-size: .75em;
+        }
+    }
+    .rate-ex {
+        margin: 10px auto;
+    }
+    &__notice {
+        margin: 0px auto;
+        p { margin-bottom: 0; }
+    }
+    .prog-charts, .apply {
+        margin-bottom: 15px;
+    }
 }
 
 // Extra Small Devices, Phones
 @media only screen and (min-width: $extra-small-container-width) {}
 
-
 //Homepage  - Singh
 //0px - 768px
-@media (max-width: $small-container-width) {
-  .homepage__button {
-    margin: 0px 0px 20px 0px !important;
-  }
-  .button--round {
-    margin:  15px auto;
-  }
-}
 
-
+/* @media (max-width: $small-container-width) {
+    .homepage__button {
+        margin: 0px 0px 20px 0px !important;
+    }
+    .button--round {
+        margin: 15px auto;
+    }
+} */
 
 // Small Devices, Tablets
 @media only screen and (min-width: $small-container-width) {
+    /* masonry gallery styles */
+    .grid-sizer,
+    .grid-item {
+        width: calc( 100% / 12);
+    }
+    .grid-item {
+        height: auto;
+        float: left;
+        margin-bottom: 4px;
+        // 100% / 6 for six double width columns, plus 4px for the gutter would have been in the middle, minus 4px for gutters
+        &--w2h1,
+        &--w2h2,
+        &--w2h3 {
+            // current width: calc( ( 100% / 6 ) );
+            width: calc( (100% / 6) - 4px);
+        }
+        &--w3h2,
+        &--w3h3 {
+            // 100% / 4 (12 / 3 = 4) for 4 triple width columns, plus 8px for the two gutters in the middle, minus 4px for gutters
+            // current width: calc( ( 100% / 4 ) );
+            width: calc( (100% / 4) - 4px);
+        }
+        img {
+            width: 100%;
+        }
+    }
+    /* end masonry gallery styles */
     .home {
         .container-fluid,
         .main {
@@ -124,8 +232,6 @@
             background-size: cover;
         }
         &__softbox {
-            display: inline-block;
-            background: rgba(255, 255, 255, .5);
             margin: 80px auto;
             padding: 50px;
         }
@@ -195,6 +301,9 @@
             font-family: $sans-serif;
             font-weight: 400;
         }
+        &__header {
+            background-color: transparent;
+        }
         &__row {
             border: 1px solid $brand-primary;
             margin-bottom: 20px;
@@ -235,12 +344,14 @@
             background-position: center bottom;
             background-repeat: no-repeat;
             background-size: cover;
+            border-top: 0px;
         }
         &__softbox {
             background: rgba(255, 255, 255, .5);
         }
     }
     .section-type {
+        display: inline;
         font-family: "urw-antiqua", serif;
         font-weight: 400;
         font-style: italic;
@@ -252,6 +363,11 @@
         position: fixed;
         left: 5%;
         top: 100px;
+    }
+    .activities-grid {
+        .image-wrapper {
+            border: 3px solid $white;
+        }
     }
     .family-holidays {
         padding-top: 40px;
@@ -282,37 +398,6 @@
             font-size: 2.75em;
             span {
                 font-size: .5em;
-            }
-        }
-    }
-    .activities-grid {
-        .image-wrapper {
-            position: relative;
-            border: 3px solid $white;
-            img {
-                width: 100%;
-                overflow: hidden;
-            }
-        }
-        .mountain-background {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            overflow: hidden;
-            background-image: url('#{$document-root}/wp-content/themes/bw/dist/images/activites-mountain-background.png');
-            background-position: left;
-            height: 180px;
-            width: 400px;
-            z-index: 1000;
-            p {
-                position: absolute;
-                bottom: 0;
-                left: 20px;
-                margin-bottom: 0;
-                font-family: $serif;
-                font-size: 2em;
-                color: $white;
-                text-transform: uppercase;
             }
         }
     }

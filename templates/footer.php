@@ -27,13 +27,13 @@
     <div class="container mobile-footer">
             <div class="mobile-footer__social">
                     <div class="mobile-footer__social__left">
-                    <a href="https://www.facebook.com/uclabruinwoods"><i class="fa fa-facebook fa-1-5x" aria-hidden="true" target="_blank"></i></a>
+                    <a href="https://www.facebook.com/uclabruinwoods"><i class="fa fa-facebook fa-1-5x fa-fw" aria-hidden="true" target="_blank"></i></a>
                     </div>
                     <div class="mobile-footer__social__center">
-                    <a href="https://www.instagram.com/uclabruinwoods/"><i class="fa fa-instagram fa-1-5x" aria-hidden="true" target="_blank"></i></a>
+                    <a href="https://www.instagram.com/uclabruinwoods/"><i class="fa fa-instagram fa-1-5x fa-fw" aria-hidden="true" target="_blank"></i></a>
                     </div>
                     <div class="mobile-footer__social__right">
-                    <a href="https://twitter.com/uclalakearrow"><i class="fa fa-twitter fa-1-5x" aria-hidden="true" target="_blank"></i></a>
+                    <a href="https://twitter.com/uclalakearrow"><i class="fa fa-twitter fa-1-5x fa-fw" aria-hidden="true" target="_blank"></i></a>
                     </div>
             </div>
             <div class="mobile-footer__contact">
