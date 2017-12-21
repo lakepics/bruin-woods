@@ -22,6 +22,12 @@ nav {
         }
     }
 }
+.dropdown-menu {
+    margin-left: 15px;
+    li {
+        line-height: 35px;
+    }
+}
 
 //singh edits
 // 0px to 768px
@@ -183,6 +189,7 @@ nav {
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a5e5', endColorstr='#00ffff', GradientType=1); */
         border-radius: 0;
         border-width: 0;
+        margin-left: 0;
         .dropdown-nav-wrapper {
             display: block;
             width: $medium-container-width;
