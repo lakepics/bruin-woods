@@ -94,6 +94,7 @@ if( have_rows('flex_content') ):
 
         elseif( get_row_layout() == '100_family' ):
 
+            $visibility = get_sub_field('visibility');
             $background_image = get_sub_field('background_image');
             $holiday_name = get_sub_field('heading_antiqua');
             $holiday_dates = get_sub_field('heading_proxima');
@@ -107,9 +108,12 @@ if( have_rows('flex_content') ):
             $holiday_full = get_sub_field('holiday_full');
             $program_charts_url = get_sub_field('program_charts_url');
 
+
+            if ( $visibility == true ) { $visibility = 'display: block; '; } else { $visibility = 'display: none; '; }
+
             // layout goes below
 
-            echo '<div class="family-holidays family-holidays__background-image" style="background-image: url(\'' . $background_image['url'] . '\');"><div class="container family-holidays">
+            echo '<div class="family-holidays family-holidays__background-image" style="'.$visibility.'background-image: url(\'' . $background_image['url'] . '\');"><div class="container family-holidays">
                     <div class="row">';
                                 $content_faces = get_sub_field('content_faces');
             if ( $content_faces == left ) {
@@ -171,7 +175,7 @@ if( have_rows('flex_content') ):
                                     }
             }
 
-            echo '   </div>
+            echo '   </div></div>
                 </div>
             </div>';
 

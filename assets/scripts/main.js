@@ -33,7 +33,7 @@
                 $('.hero-slider').slick({
                     autoplay: true,
                     adaptiveHeight: true,
-                    autoplaySpeed: 4000,
+                    autoplaySpeed: 6000,
                     arrows: false,
                     dots: true,
                     appendDots: $('.hero-slider__nav'),
@@ -97,10 +97,24 @@
     });
     // remove background images on mobile
     var viewportWidth = $(window).width();
-    if (viewportWidth < 768 ) {
+    if (viewportWidth < 768) {
         $(".content-section__background-image, .table-section__background-image, .family-holidays__background-image").removeAttr("style");
         $(".table-section .no-padding").removeClass("no-padding");
         $(".family-holidays div.text-right").removeClass("text-right").addClass("text-left");
     }
+    // fade section label on scroll
+    $(window).scroll(function () {
+        $(".section-type").css("opacity", 0.1 - $(window).scrollTop() / 5000);
+    });
+
+    $('ul.nav li').hover(function () {
+        $(this).find('.dropdown-menu').stop(true, true).delay(50).fadeIn(250);
+    }, function () {
+        $(this).find('.dropdown-menu').stop(true, true).delay(50).fadeOut(250);
+    });
+
+    $('ul.nav li.dropdown').mouseout( function() { $('.current_page_ancestor ul').show(); });
+
+    $('.current_page_ancestor ul').show();
 
 })(jQuery); // Fully reference jQuery after this point.
