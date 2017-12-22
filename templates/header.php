@@ -6,7 +6,7 @@
 <header class="banner navbar navbar-default navbar-fixed-top" role="banner">
   <div class="container">
     <div class="navbar-header">
-          <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"><img src="<?php bloginfo('template_directory'); ?>/dist/images/logo.svg" alt="<?php bloginfo('name'); ?>"></a>
+          <a class="navbar-brand desktop-logo" href="<?= esc_url(home_url('/')); ?>"><img src="<?php bloginfo('template_directory'); ?>/dist/images/logo.svg" alt="<?php bloginfo('name'); ?>"></a>
           <a class="navbar-brand mobile-logo" href="<?= esc_url(home_url('/')); ?>"><img src="<?php bloginfo('template_directory'); ?>/dist/images/logo_mobile.svg" alt="<?php bloginfo('name'); ?>"></a>
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only"><?= __('Toggle navigation', 'sage'); ?></span>
