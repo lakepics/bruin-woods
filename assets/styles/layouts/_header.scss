@@ -31,10 +31,42 @@ nav {
 }
 
 //singh edits
+
 /*------------------------------------*\
     0px - 1024px
 \*------------------------------------*/
+
 @media only screen and (max-width: 1024px) {
+  //dropdown
+  .nav {
+    li {
+      font-size: 1em !important;
+    }
+  }
+  .nav>li>a {
+    padding: 10px 30px;
+    font-size: 1em !important;
+  }
+  .open .dropdown-menu {
+    position: static;
+    float: none;
+    width: auto;
+    margin-top: 0;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+    >li>a,
+    .dropdown-header {
+      padding: 5px 15px 5px 25px;
+    }
+    >li>a {
+      line-height: $line-height-computed;
+      &:hover,
+      &:focus {
+        background-image: none;
+      }
+    }
+  }
   .navbar-header {
     background: linear-gradient(90deg, #00a5e5 0, rgba(0, 255, 255, .9));
     border-bottom: 2px solid white;
@@ -52,7 +84,8 @@ nav {
   }
   .dropdown-nav-wrapper {
     li {
-      margin-left: 15px;
+      margin-left: 30px;
+      font-size: 1em !important;
     }
   }
   .mobile-logo {
@@ -70,9 +103,54 @@ nav {
   }
 }
 
+@media screen and (max-device-width: 1024px) {
+  .navbar {
+    -webkit-text-size-adjust: 100%;
+  }
+}
 
 //bootstrap breakpooint for collapse
 @media (max-width: 1024px) {
+  //fix safari issue with font size being larger 
+  .navbar-nav>li>.dropdown-menu {
+    margin-top: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    font-size: 1.2em;
+  } //navbar collapse collors
+  .navbar-default .navbar-nav>.active>a,
+  .navbar-default .navbar-nav>.active>a:focus,
+  .navbar-default .navbar-nav>.active>a:hover {
+    color: white;
+    background-color: #004886;
+  }
+  .navbar-default .navbar-nav>li>a {
+    font-size: 1.2em !important;
+  }
+  .navbar-default .navbar-nav>li>a:focus,
+  .navbar-default .navbar-nav>li>a:hover {
+    color: white;
+    background-color: #106dbe;
+  }
+  .navbar-default .navbar-nav>.open>a,
+  .navbar-default .navbar-nav>.open>a:focus,
+  .navbar-default .navbar-nav>.open>a:hover {
+    color: white;
+    background-color: #106dbe;
+  }
+  .dropdown-nav-wrapper {
+    a:focus,
+    a:hover,
+    a:active {
+      color: #ffb300;
+      text-decoration: none;
+    }
+  }
+  //navbar collapse color end
+  //control navbar dropdown length for mobile devices
+  .navbar-fixed-top .navbar-collapse {
+    max-height: 450px;
+  }
   .navbar-header {
     float: none;
   }
@@ -97,6 +175,7 @@ nav {
   .navbar-nav {
     float: none!important;
     margin-top: 7.5px;
+    height: 100%;
   }
   .navbar-nav>li {
     float: none;
@@ -113,9 +192,8 @@ nav {
       width: 100%;
       padding: 0px !important;
     }
-  }
-  //hide logo above tablet
-    .desktop-logo {
+  } //hide logo above tablet
+  .desktop-logo {
     img {
       height: 100px;
       margin-top: 20px;
@@ -124,9 +202,14 @@ nav {
   }
 }
 
+
+
+
+
 /*------------------------------------*\
     1025px - Infinity
 \*------------------------------------*/
+
 @media only screen and (min-width: 1025px) {
   .navbar-toggle {
     display: none;
@@ -142,13 +225,14 @@ nav {
       padding: 0px !important;
     }
   }
-      .desktop-logo {
+  .desktop-logo {
     img {
-      height: 100px;
+      height: 80px;
       margin-top: 20px;
+      display: inline !important;
+      padding-left: 15px;
     }
   }
-
 }
 
 //end singh edits
@@ -156,7 +240,7 @@ nav {
 @media only screen and (min-width: $extra-small-container-width) {}
 
 // Small Devices, Tablets
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1025px) {
   .banner {
     background: rgba(0, 165, 229, .9);
     background: -moz-linear-gradient(left, rgba(0, 165, 229, 1) 0%, rgba(0, 255, 255, 0.9) 100%);
@@ -317,7 +401,7 @@ nav {
     .navbar-nav {
       >li {
         >a {
-          font-size: .8em;
+          font-size: 0.8em;
         }
       }
     }
@@ -326,7 +410,7 @@ nav {
     .dropdown-nav-wrapper {
       >li {
         >a {
-          //font-size: .75em;
+          font-size: 1em;
         }
       }
     }
