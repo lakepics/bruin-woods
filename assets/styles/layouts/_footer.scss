@@ -1,7 +1,7 @@
 // Footer Styles
 //mobile footer - singh
 .footer {
-  background: $light-blue; // background-image: url('#{$document-root}/wp-content/themes/bw/dist/images/mountain3.svg');
+  background: $ucla-blue; // background-image: url('#{$document-root}/wp-content/themes/bw/dist/images/mountain3.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
@@ -111,8 +111,8 @@
 
 //right icon
 .contact-mobile-right-icon {
-  background: #666;
-  background: rgb(0, 165, 229);
+  background: $gray;
+  background: $ucla-blue;
   border-radius: 100%;
   border: 3px solid #fff;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
@@ -134,7 +134,7 @@ margin-top: 20px;
 }
 
 .custom-icon-center {
-  background: rgb(0, 165, 229);
+  background: $ucla-blue;
   border-radius: 100%;
   border: 3px solid #fff;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
@@ -157,8 +157,8 @@ margin-top: 20px;
 
 //left icon
 .contact-mobile-left-icon {
-  background: #666;
-  background: rgb(0, 165, 229);
+  background: $gray;
+  background: $ucla-blue;
   border-radius: 100%;
   border: 3px solid #fff;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.46);
@@ -220,7 +220,7 @@ margin-top: 20px;
   .footer {
     height: 440px;
     min-height: 440px;
-    background: $light-blue; // background-image: url('#{$document-root}/wp-content/themes/bw/dist/images/mountain3.svg');
+    background: $ucla-blue; // background-image: url('#{$document-root}/wp-content/themes/bw/dist/images/mountain3.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;

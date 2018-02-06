@@ -1,0 +1,339 @@
+// Header Styles
+// Reset BS default hamburger breakpoint to 1024px
+@media (max-width: $medium-container-width) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,
+    .navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in {
+        display: block !important;
+    }
+}
+
+// end hamburger reset
+// 0 up - default styles
+.navbar-brand {
+    &.mobile-logo {
+        height: 35px;
+        width: 200px;
+        margin-left: 15px;
+        margin-top: 5px;
+        background-image: url('#{$document-root}/wp-content/themes/bw/dist/images/logo_mobile.svg');
+        background-repeat: no-repeat;
+    }
+    >img {
+        display: none;
+    }
+}
+
+nav {
+    a {
+        color: $white;
+    }
+}
+
+.navbar {
+    border-bottom: 2px solid $white;
+}
+
+.navbar-default {
+    .navbar-nav {
+        >li {
+            a {
+                color: $white;
+            }
+        }
+    }
+    .navbar-text {
+        color: $white;
+    }
+    .navbar-collapse {
+        border-top: 0px;
+    }
+}
+
+.nav {
+    >li {
+        >a:hover {
+            background-color: $light-blue;
+        }
+    }
+}
+
+.navbar-default {
+    background: $ucla-blue-ada;
+    background: -moz-linear-gradient(left,
+    #{$ucla-blue-90} 0%,
+    #{$ucla-blue-80} 100%);
+    background: -webkit-gradient(left top,
+    right top,
+    color-stop(0%, #{$ucla-blue-90}),
+    color-stop(100%, #{$ucla-blue-80}));
+    background: -webkit-linear-gradient(left,
+    #{$ucla-blue-90} 0%,
+    #{$ucla-blue-80} 100%);
+    background: -o-linear-gradient(left,
+    #{$ucla-blue-90} 0%,
+    rgba(52, 123, 173, 0.95) 100%);
+    background: -ms-linear-gradient(left,
+    #{$ucla-blue-90} 0%,
+    #{$ucla-blue-80} 100%);
+    background: linear-gradient(to right,
+    #{$ucla-blue-90} 0%,
+    #{$ucla-blue-80} 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a5e5', endColorstr='#00ffff', GradientType=1);
+}
+
+/* .dropdown-menu {
+    margin-left: 15px;
+    li {
+        line-height: 35px;
+    }
+} */
+
+// Medium Devices, Desktops ( <= 1024px )
+
+/* @media only screen and (min-width: 1025px) {
+    .navbar-brand {
+        &.mobile-logo {
+            background-image: none;
+            height: auto;
+            margin-top: inherit;
+            margin-left: inherit;
+        }
+        >img {
+            display: none;
+        }
+    }
+
+} */
+
+// 0px to 1024px
+@media only screen and (max-width: $medium-container-width) {
+    .navbar-default .navbar-toggle {
+        border-color: transparent;
+        border: none;
+        .icon-bar {
+            background-color: $white;
+        }
+        &:hover,
+        &:active {
+            background-color: transparent;
+        }
+    }
+    .mobile-logo {
+        img {
+            display: none;
+        }
+    }
+    .main,
+    .container-fluid {
+        padding: 0px;
+    }
+}
+
+//end singh edits
+// Extra Small Devices, Phones ( >= 480px)
+@media only screen and (min-width: $extra-small-container-width) {}
+
+// Small Devices, Tablets ( >= 768px )
+@media only screen and (min-width: $small-container-width) {}
+
+// Medium Devices, Desktops ( >= 1024px )
+@media only screen and (min-width: $medium-container-width) {
+        .navbar-default {
+        .navbar-nav {
+            >li {
+                >a {
+                    padding-left: 13px;
+                    padding-right: 13px;
+                    color: $white;
+                    font-family: $sans-serif;
+                    font-weight: 400;
+                    font-size: 1em;
+                    text-transform: uppercase;
+                    letter-spacing: .1em;
+                    .caret {
+                        display: none;
+                    }
+                    &:hover {
+                        color: $brand-gold;
+                    }
+                    &:active {
+                        color: $brand-gold;
+                    }
+                }
+            }
+            >li.current-menu-ancestor {
+                >a {
+                    color: $brand-gold;
+                }
+            }
+            >.active {
+                >a,
+                >a:hover,
+                >a:focus {
+                    background-color: transparent;
+                    color: $brand-gold;
+                    font-family: $semibold-sans-serif;
+                    font-weight: 600;
+                }
+            }
+            >.open {
+                >a,
+                >a:focus,
+                >a:hover {
+                    border-top: 0;
+                    border-bottom: 0;
+                    background-color: transparent;
+                    color: $brand-gold;
+                    font-family: $semibold-sans-serif;
+                    font-weight: 600;
+                    z-index: 1001;
+                }
+            }
+        }
+    }
+    .brand {
+        float: left;
+    }
+    .nav {
+        display: block;
+    }
+    .menu-primary-navigation-container {
+        margin-top: 85px;
+        float: right;
+    }
+    .nav-primary {
+        float: right;
+        .nav,
+        .menu-item,
+        .sub-menu {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .nav {
+            margin-top: 91px;
+            position: relative;
+        }
+    }
+    .dropdown-menu {
+        background: $ucla-blue-80;
+        border-radius: 0;
+        border-width: 0;
+        margin-left: 0;
+        >li {
+            >a {
+                color: $white;
+                font-size: 1.1em;
+                line-height: 1.4em;
+                font-family: $sans-serif;
+                font-weight: 400;
+                letter-spacing: .03125em;
+                &:hover {
+                    background: rgba(255, 255, 255, .1);
+                    color: $brand-gold;
+                }
+            }
+        }
+    }
+
+    .mobile-logo {
+        img {
+            display: none;
+        }
+    }
+    nav {
+        background-color: transparent;
+    }
+    .navbar {
+        border-bottom-width: 0;
+    }
+ /*   .banner {
+        height: 110px;
+        min-height: 110px; // display: none;
+        >.container {
+            height: 110px;
+        }
+} */
+    .menu-primary-navigation-container {
+        margin-top: 60px;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .navbar-brand.mobile-logo {
+        height: auto;
+        width: auto;
+        margin-top: inherit;
+        background-image: url();
+    }
+    .navbar-brand {
+        display: inline-block;
+        height: 70px;
+        padding: 0;
+        >img {
+            display: inline-block;
+            margin-top: 20px;
+            height: 70px;
+        }
+    }
+}
+
+// Large Devices, Wide Screens
+@media only screen and (min-width: $large-container-width) {
+    .navbar-brand {
+        height: 100px;
+        img {
+            height: 100px;
+        }
+    }
+    .banner {
+        height: 140px;
+        min-height: 140px;
+        >.container {
+            height: 140px;
+        }
+    }
+    .navbar-default {
+        .navbar-nav {
+            >li {
+                >a {
+                    font-size: .8em;
+                }
+            }
+        }
+    }
+    .menu-primary-navigation-container {
+        margin-top: 90px;
+    }
+}

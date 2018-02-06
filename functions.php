@@ -16,6 +16,7 @@ $sage_includes = [
   'lib/titles.php',    // Page titles
   'lib/wrapper.php',   // Theme wrapper class
   'lib/wp-bootstrap-navwalker.php', // WP Nav Walker
+ // 'lib/breadcrumbs.php', // Breadcrumbs from https://www.thewebtaylor.com/articles/wordpress-creating-breadcrumbs-without-a-plugin
   'lib/customizer.php' // Theme customizer
 ];
 

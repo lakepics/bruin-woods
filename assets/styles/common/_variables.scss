@@ -6,22 +6,35 @@ $main-sm-columns:       12;
 $sidebar-sm-columns:    4;
 
 // UCLA Colors
-$ucla-blue:             #3284BF; // UCLA Blue
+$ucla-blue:             #3284bf; // UCLA Blue
+$ucla-blue-ada:         #347bad; // UCLA ADA Blue for Headers and Text
 $ucla-gold:             #FFE800; // UCLA Gold
 $dark-blue:             #1E4B87; // Secondary Palette, Dark Blue
-$light-blue:            #00A5E5; // Secondary Palette, Light Blue
+$light-blue:            #00a5e5; // Secondary Palette, Light Blue
 $gray:                  #666666; // Tertiary Palette, Gray
 $atomic-blue:           #00FFFF; // Tertiary Palette, Flourescent Blue
 
 
 // Theme Specific Colors
-$brand-primary:         #00a5e5; // Secondary Palette, Light Blue
+$brand-primary:         #3284bf; // UCLA Blue formerly Secondary Palette, Light Blue
 $brand-gold:            #FFB300;
 $dark-gray:             #363636; // gray content section background
 $white:                 #FFFFFF;
 $link-inline:           #9edeff; // gray content link color
 $link-active:           #FFE800; // UCLA Gold
 $text-default:          #333333; // Default Text Color
+
+// rgba transparent values for gradients
+$ucla-blue-90:          rgba(50,132,191,.9);
+$ucla-blue-80:          rgba(0,165,229,.8);
+$ucla-blue-70:          rgba(0,165,229,.7);
+$brand-primary-90:      rgba(0,165,229,.9);
+$brand-primary-80:      rgba(0,165,229,.8);
+$brand-primary-70:      rgba(0,165,229,.7);
+$dark-blue-80:          rgba(30,75,135,.8);
+$white-80:              rgba(255,255,255,.8);
+$white-50:              rgba(255,255,255,.5);
+$white-20:              rgba(255,255,255,.2);
 
 // UCLA Brand Fonts
 $sans-serif: 'Proxima Nova Regular', 'Helvetica Neue', Helvetia, Arial, sans-serif;

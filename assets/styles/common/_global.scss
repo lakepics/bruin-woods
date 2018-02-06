@@ -6,9 +6,9 @@ h1 {
   font-family: $serif;
   font-weight: 400;
   font-style: italic;
-  font-size: 2.15em;
+  font-size: 1.67em;
   text-transform: uppercase;
-  color: $brand-primary;
+  color: $ucla-blue-ada;
   line-height: 1.1em;
   >span {
     display: block;
@@ -20,7 +20,6 @@ h1 {
     color: $brand-gold;
   }
 }
-
 h2 {
 
     font-size: 1.35em;
@@ -29,7 +28,6 @@ h2 {
         display: block;
     }
 }
-
 p,
 li {
   font-family: $light-sans-serif;
@@ -37,9 +35,15 @@ li {
   font-size: 1em;
   line-height: 1.85em;
 }
-
 p {
   margin-bottom: 1.65em;
+}
+
+a {
+    color: $ucla-blue-ada;
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 .antiqua {
@@ -59,7 +63,7 @@ p {
 }
 
 .blue {
-  color: $brand-primary;
+  color: $ucla-blue-ada;
 }
 
 .gold {
@@ -84,7 +88,7 @@ p {
     padding-top: 0px;
 }
   body {
-        margin-top: 45px;
+        // margin-top: 45px;
     }
 }
 
@@ -110,6 +114,9 @@ p {
   body {
     font-size: 14px;
   }
+    h1 {
+        font-size: 2.15em;
+    }
 }
 
 // Large Devices, Wide Screens

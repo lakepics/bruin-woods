@@ -19,6 +19,25 @@ function colBalance($col_bal) {
             return array($lt, $rt);
 }
 
+function custom_breadcrumbs($section_title, $page_title) {
+    if ($section_title == $page_title) {
+    $breadcrumbs = '<span class="breadcrumbs"><ul><li><a href="/">Home</a></li> &gt; &nbsp; <li><a href="#">' . $page_title . '</a></li></ul></span>';
+    } elseif ($section_title !== $page_title) {
+    $breadcrumbs = '<span class="breadcrumbs"><ul><li><a href="/">Home</a></li> &gt; &nbsp; <li>' . $section_title . '</li> &gt; &nbsp; <li><a href="#">' . $page_title . '</a></li></ul></span>';
+    }
+    return $breadcrumbs;
+}
+
+function sectionNavigation($section_title) {
+        if ($section_title) {
+            $section_title = str_replace(' ', '_', $section_title);
+            $section_title = $section_title . '_navigation';
+            if (has_nav_menu($section_title)) :
+                return wp_nav_menu(['theme_location' => $section_title, 'walker' => new wp_bootstrap_navwalker(), 'depth' => '0', 'container_class' => 'section-navbar__wrapper', 'menu_class' => 'nav navbar-nav']);
+            endif;
+        }
+}
+
 // check if the flexible content field has rows of data
 if( have_rows('flex_content') ):
 
@@ -28,7 +47,9 @@ if( have_rows('flex_content') ):
         if( get_row_layout() == 'hero' ):
 
             $hero_image = get_sub_field('hero_image');
+            $page_title = get_the_title();
             $section_title = get_sub_field('section');
+            $section_title = strtolower($section_title);
             $heading_antiqua = get_sub_field('heading_antiqua');
             $heading_proxima = get_sub_field('heading_proxima');
             $subheading = get_sub_field('heading_h2');
@@ -38,7 +59,13 @@ if( have_rows('flex_content') ):
 
             list($lt_col, $rt_col) = colBalance($col_bal);
 
-            echo '<div class="hero__background-image" style="background-image: url(\'' . $hero_image['url'] . '\');"><div class="container hero">
+            echo '<div class="hero__background-image" style="background-image: url(\'' . $hero_image['url'] . '\');">';
+                if ($section_title == 'summer' || $section_title == 'holidays' || $section_title == 'about') {
+                    echo '<div class="section-navbar"><div class="container">';
+                    sectionNavigation($section_title);
+                    echo '</div></div>';
+                }
+            echo '<div class="container hero">
                 <div class="row">';
                 if ( $lt_col == 12 ) {
                     echo '<div class="col-sm-12 hero__text-container">
@@ -210,8 +237,7 @@ if( have_rows('flex_content') ):
             // layout goes below
             echo '<div class="table-section__background-image" style="background-image: url(\'' . $background_image['url'] . '\');"><div class="container table-section">
                     <div class="row">
-                        <div class="col-sm-6"></div>
-                        <div class="col-sm-6">';
+                        <div class="col-sm-6 col-sm-offset-6">';
                 // loop over tables
                 if ( have_rows('table')) :
                     while ( have_rows ('table')) : the_row();

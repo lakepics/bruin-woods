@@ -2,7 +2,23 @@
     // Home Page Slider Styles
     //
     // 0up
-    //singh mobile slider edits
+    .hero-slider {
+        &__overlay-wrapper {
+            position: absolute;
+            right: 0;
+            background: $ucla-blue-ada;
+            background: -moz-linear-gradient(left, #{$ucla-blue-90} 0%, #{$ucla-blue-70} 100%);
+            background: -webkit-gradient(left top, right top, color-stop(0%, #{$ucla-blue-90}), color-stop(100%, #{$ucla-blue-70}));
+            background: -webkit-linear-gradient(left, #{$ucla-blue-90} 0%, #{$ucla-blue-70} 100%);
+            background: -o-linear-gradient(left, #{$ucla-blue-90} 0%, #{$ucla-blue-70} 100%);
+            background: -ms-linear-gradient(left, #{$ucla-blue-90} 0%, #{$ucla-blue-70} 100%);
+            background: linear-gradient(to right, #{$ucla-blue-90} 0%, #{$ucla-blue-70} 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a5e5', endColorstr='#00ffff', GradientType=1);
+            z-index: 2000;
+        }
+    }
+
+    //singh mobile slider edits 0-480px only
     @media only screen and (max-width: $small-container-width) {
         .hero-slider {
             min-height: 65vh;
@@ -14,26 +30,16 @@
                 overflow: hidden;
             }
             &__overlay-wrapper {
-                position: absolute;
                 top: 0;
-                right: 0;
                 display: inline-block;
                 height: 100%;
                 padding: 15px;
-                background: rgba(0, 165, 229, 1);
-                background: -moz-linear-gradient(left, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
-                background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0, 165, 229, .9)), color-stop(100%, rgba(0, 255, 255, 0.75)));
-                background: -webkit-linear-gradient(left, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
-                background: -o-linear-gradient(left, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
-                background: -ms-linear-gradient(left, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
-                background: linear-gradient(to right, rgba(0, 165, 229, .9) 0%, rgba(0, 255, 255, 0.75) 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a5e5', endColorstr='#00ffff', GradientType=1);
-                z-index: 2000;
             }
             &__overlay-container {
                 position: relative;
             }
             &__overlay-content {
+                margin-top: 60px;
                 padding-bottom: 30px;
                 h1 {
                     color: $white;
@@ -118,22 +124,14 @@
                 overflow: hidden;
             }
             &__overlay-wrapper {
-                position: absolute;
                 top: 25%;
+                left: 0;
                 right: 0;
-                display: inline-block;
-                width: 800px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 560px;
                 height: auto;
-                padding: 50px;
-                background: rgba(0, 165, 229, 1);
-                background: -moz-linear-gradient(left, rgba(0, 165, 229, .8) 0%, rgba(0, 255, 255, 0.65) 100%);
-                background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0, 165, 229, .8)), color-stop(100%, rgba(0, 255, 255, 0.65)));
-                background: -webkit-linear-gradient(left, rgba(0, 165, 229, .8) 0%, rgba(0, 255, 255, 0.65) 100%);
-                background: -o-linear-gradient(left, rgba(0, 165, 229, .8) 0%, rgba(0, 255, 255, 0.65) 100%);
-                background: -ms-linear-gradient(left, rgba(0, 165, 229, .8) 0%, rgba(0, 255, 255, 0.65) 100%);
-                background: linear-gradient(to right, rgba(0, 165, 229, .8) 0%, rgba(0, 255, 255, 0.65) 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a5e5', endColorstr='#00ffff', GradientType=1);
-                z-index: 2000;
+                padding: 40px;
             }
             &__overlay-container {
                 position: relative;
@@ -141,7 +139,7 @@
             &__overlay-content {
                 padding-bottom: 30px;
                 h1 {
-                    font-size: 3.5em;
+                    font-size: 2.75em;
                     color: $white;
                     text-align: center;
                     font-weight: 300;
@@ -187,8 +185,8 @@
                     list-style: none;
                     display: inline-block;
                     margin-right: 20px;
-                    width: 20px;
-                    height: 20px;
+                    width: 10px;
+                    height: 10px;
                     border-radius: 20px;
                     border: 1px solid hsla(0, 0%, 100%, .5);
                     background-color: hsla(0, 0%, 100%, .5);
@@ -196,7 +194,26 @@
             }
         }
     } // Medium Devices, Desktops
-    @media only screen and (min-width: $medium-container-width) {}
+    @media only screen and (min-width: $medium-container-width) {
+        .hero-slider {
+            &__overlay-wrapper {
+                width: 800px;
+                padding: 50px;
+                margin-right: 0;
+            }
+            &__overlay-content {
+                h1 {
+                    font-size: 3.5em;
+                }
+            }
+            .slick-dots {
+                li {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+    }
 
     // Large Devices, Wide Screens
     @media only screen and (min-width: $large-container-width) {}

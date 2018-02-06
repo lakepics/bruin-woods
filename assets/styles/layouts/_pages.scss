@@ -73,8 +73,8 @@
 
 .table-section {
     &__background-image {
-        border-top: 2px solid $brand-primary;
-        border-bottom: 2px solid $brand-primary;
+        border-top: 2px solid $ucla-blue;
+        border-bottom: 2px solid $ucla-blue;
     }
     &__header {
         padding-top: 1px;
@@ -118,6 +118,7 @@
         bottom: 0;
         overflow: hidden;
         background-image: url('#{$document-root}/wp-content/themes/bw/dist/images/activites-mountain-background.png');
+        background-repeat: no-repeat;
         background-position: left;
         height: 180px;
         width: 100%;
@@ -146,7 +147,7 @@
     h2 {
         font-size: 1.7em;
         span {
-        font-size: .75em;
+            font-size: .75em;
         }
     }
     .rate-ex {
@@ -154,10 +155,77 @@
     }
     &__notice {
         margin: 0px auto;
-        p { margin-bottom: 0; }
+        p {
+            margin-bottom: 0;
+        }
     }
-    .prog-charts, .apply {
+    .prog-charts,
+    .apply {
         margin-bottom: 15px;
+    }
+}
+
+.panel {}
+
+.panel-heading {
+    padding: 0;
+}
+
+.panel-title {
+    font-family: $semibold-sans-serif;
+    font-weight: 600;
+    color: $white;
+    font-size: 1em;
+    line-height: 2.75em;
+    background: $ucla-blue;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    a {
+        margin-left: 15px;
+    }
+}
+
+.section-navbar {
+    display: none;
+}
+
+.breadcrumbs {
+    display: none;
+    position: absolute;
+    top: 50px;
+    list-style: none;
+    margin: 10px 0;
+    overflow: hidden;
+    z-index: 5000;
+    ul {
+        padding-left: 7px;
+    }
+    li {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 15px;
+        font-family: $semibold-sans-serif;
+        font-weight: 600;
+        font-size: .75em;
+        color: $ucla-blue-ada;
+        letter-spacing: .0625em;
+        text-transform: uppercase;
+    }
+    a {
+        font-family: $semibold-sans-serif;
+        font-weight: 600;
+        letter-spacing: .0625em;
+        text-transform: uppercase;
+    }
+    .separator {
+        font-size: 18px;
+        font-weight: 100;
+        color: #ccc;
+    }
+}
+.hero {
+    &__text-container {
+        margin-top: 60px;
     }
 }
 
@@ -178,6 +246,9 @@
 
 // Small Devices, Tablets
 @media only screen and (min-width: $small-container-width) {
+    .masonry-grid {
+        margin-top: 56px;
+    }
     /* masonry gallery styles */
     .grid-sizer,
     .grid-item {
@@ -187,6 +258,10 @@
         height: auto;
         float: left;
         margin-bottom: 4px;
+        // not sure if the -4px is really necessary
+        &--w1h1 {
+            width: calc( (100% / 12) - 4px);
+        }
         // 100% / 6 for six double width columns, plus 4px for the gutter would have been in the middle, minus 4px for gutters
         &--w2h1,
         &--w2h2,
@@ -199,6 +274,9 @@
             // 100% / 4 (12 / 3 = 4) for 4 triple width columns, plus 8px for the two gutters in the middle, minus 4px for gutters
             // current width: calc( ( 100% / 4 ) );
             width: calc( (100% / 4) - 4px);
+        }
+        &--w4h3 {
+            width: calc( (100% / 3) - 4px);
         }
         img {
             width: 100%;
@@ -256,7 +334,7 @@
             }
             h3 {
                 padding: 10px 0;
-                color: $brand-primary;
+                color: $ucla-blue-ada;
                 text-transform: uppercase;
                 font-family: $serif;
                 font-weight: 300;
@@ -275,6 +353,7 @@
         }
     }
     .hero {
+        margin-top: 0px;
         padding-bottom: 50px;
         &__background-image {
             background-position: center bottom;
@@ -282,7 +361,7 @@
             background-size: cover;
         }
         &__text-container {
-            margin-top: 190px;
+            margin-top: 60px;
         }
     }
     .table-section {
@@ -309,7 +388,7 @@
             background-color: transparent;
         }
         &__row {
-            border: 1px solid $brand-primary;
+            border: 1px solid $ucla-blue;
             margin-bottom: 20px;
             background: $white;
         }
@@ -318,14 +397,14 @@
             font-size: .8em;
             font-family: $sans-serif;
             text-transform: uppercase;
-            color: $brand-primary;
+            color: $ucla-blue;
             background: $white;
             text-align: center;
             vertical-align: middle;
             line-height: 1.1em;
             letter-spacing: .0625em;
             &--reverse {
-                background: $brand-primary;
+                background: $ucla-blue-90;
                 color: $white;
             }
             &--left {
@@ -359,14 +438,16 @@
         font-family: "urw-antiqua", serif;
         font-weight: 400;
         font-style: italic;
-        color: #00a5e5;
-        font-size: 9em;
+        font-size: 6em;
+        color: $white;
         line-height: 1em;
-        opacity: .1;
+        opacity: .35;
         text-transform: lowercase;
+        text-align: right;
         position: fixed;
-        left: 5%;
-        top: 100px;
+        width: 50%;
+        left: 48%;
+        top: 50px;
     }
     .activities-grid {
         .image-wrapper {
@@ -409,7 +490,96 @@
 }
 
 // Medium Devices, Desktops
-@media only screen and (min-width: $medium-container-width) {}
-
+@media only screen and (min-width: $medium-container-width) {
+    .hero {
+        &__text-container {
+            margin-top: 100px;
+        }
+    }
+    .section-type {
+        opacity: .35;
+    }
+    .breadcrumbs {
+        position: static;
+        background: $ucla-blue;
+        display: block;
+        width: 100%;
+        margin-top: 140px;
+    }
+    .section-navbar {
+        display: block;
+        background: $brand-primary-70;
+        position: fixed;
+        top: 50px;
+        width: 100%;
+        border-top: 1px solid $white-80;
+        border-bottom: 1px solid $white;
+        z-index: 1000;
+        .navbar-nav {
+            float: left!important;
+            margin-top: 0;
+            >li {
+                float: left;
+            }
+        }
+        &__wrapper {
+            float: right;
+            height: 38px;
+            span {
+                float: left;
+                margin-right: 15px;
+                font-family: $serif;
+                font-size: 1em;
+                color: $white;
+                font-style: italic;
+                font-weight: 100;
+                letter-spacing: .0625em;
+                line-height: 38px;
+            }
+            // #menu-family-holidays-navigation { margin-left: 560px;}
+            .navbar-nav>li>a {
+                padding: 9px 15px;
+            }
+            a {
+                color: $white;
+                font-family: $sans-serif;
+                font-weight: 400;
+                font-size: 1em;
+                letter-spacing: .0625em;
+                text-transform: uppercase;
+                line-height: 38px;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1025px) {
+        .masonry-grid {
+        margin-top: 140px;
+    }
+}
 // Large Devices, Wide Screens
-@media only screen and (min-width: $large-container-width) {}
+@media only screen and (min-width: $large-container-width) {
+    .section-type {
+        color: $light-blue;
+        font-size: 9.5em;
+        width: 100%;
+        text-align: left;
+        left: 2%;
+        top: 120px;
+        opacity: .05;
+    }
+    .hero {
+        &__text-container {
+            margin-top: 180px;
+        }
+    }
+    .section-navbar {
+        top: 138px;
+        &__wrapper {
+            span,
+            a {
+                font-size: .8em;
+            }
+        }
+    }
+}

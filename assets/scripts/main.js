@@ -19,7 +19,7 @@
         'common': {
             init: function () {
                 // JavaScript to be fired on all pages
-                $('ul.dropdown-menu').wrapInner('<span class="dropdown-nav-wrapper"></span>');
+                //$('ul.dropdown-menu').wrapInner('<span class="dropdown-nav-wrapper"></span>');
 
             },
             finalize: function () {
@@ -102,19 +102,21 @@
         $(".table-section .no-padding").removeClass("no-padding");
         $(".family-holidays div.text-right").removeClass("text-right").addClass("text-left");
     }
+    if (viewportWidth < 1024) {
+        // disable dropdowns on mobile
+        $("ul.dropdown-menu").removeClass("dropdown-menu");
+    }
     // fade section label on scroll
     $(window).scroll(function () {
         $(".section-type").css("opacity", 0.1 - $(window).scrollTop() / 5000);
     });
 
-    $('ul.nav li').hover(function () {
+    $('ul.nav li.dropdown').hover(function () {
         $(this).find('.dropdown-menu').stop(true, true).delay(50).fadeIn(250);
     }, function () {
         $(this).find('.dropdown-menu').stop(true, true).delay(50).fadeOut(250);
     });
 
-    $('ul.nav li.dropdown').mouseout( function() { $('.current_page_ancestor ul').show(); });
-
-    $('.current_page_ancestor ul').show();
+    $('.section-navbar__wrapper').prepend('<span>IN THIS SECTION:</span> ');
 
 })(jQuery); // Fully reference jQuery after this point.
