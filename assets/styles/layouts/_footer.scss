@@ -23,12 +23,28 @@
       margin-bottom: 1em;
     }
   }
+  .desktop-footer {
+  }
 }
 
+//fix anchor color for phone on safari ipad
+.phone,
+.email {
+  color: white !important;
+}
 
+body>footer>div.container.desktop-footer>div:nth-child(1)>div.col-sm-10>div.footer__column.footer__column--three.col-sm-4>section>div>div:nth-child(1)>p {
+  color: white !important;
+  a {
+    color: white;
+    opacity: 1;
+  }
+}
+
+//end fix anchor
 //mobile footer - Singh
-//0px - 768px
-@media (max-width: $small-container-width) {
+//0px - 767px
+@media only screen and (max-width: 767px) {
   .desktop-footer {
     display: none;
   }
@@ -50,8 +66,9 @@
         display: inline-block;
         width: 33%;
         margin: 0 auto;
-        font-size: 35px;
+        font-size: 24px;
         float: left;
+        padding-top: 3px;
       }
       &__center {
         display: inline-block;
@@ -126,7 +143,7 @@
   transition: .5s;
   vertical-align: middle;
   width: 30px;
-margin-top: 20px;
+  margin-top: 20px;
 }
 
 .contact-mobile-right-icon:hover {
@@ -172,7 +189,7 @@ margin-top: 20px;
   transition: .5s;
   vertical-align: middle;
   width: 30px;
-margin-top: 20px;
+  margin-top: 20px;
 }
 
 .contact-mobile-left-icon:hover {
@@ -180,9 +197,9 @@ margin-top: 20px;
 }
 
 .icon-text {
-    font-family: $light-sans-serif;
-    font-weight: 300;
-    letter-spacing: 0.125em;
+  font-family: $light-sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.125em;
   display: inline;
   position: absolute;
   top: 50%;
@@ -227,12 +244,11 @@ margin-top: 20px;
     overflow: hidden;
     border-top: 4px solid $white;
     >.container {
-      height: 440px;
+      // height: 390px;
     }
     &__column {
       color: $white;
       z-index: 100;
-      margin-top: 100px;
       h3 {
         margin-top: 70px;
       }
@@ -257,11 +273,14 @@ margin-top: 20px;
       }
     }
     &__logo {
-      display: block;
+      display: inline-block;
       margin-bottom: 50px;
       img {
-        height: 150px;
-        display: block;
+        height: 120px;
+        display: inline-block;
+        margin-top: 25px;
+        float: left;
+            margin-left: 50%;
       }
     }
     &__register {
@@ -293,6 +312,7 @@ margin-top: 20px;
       text-align: center;
       text-transform: uppercase;
       letter-spacing: 0.0625em;
+      margin-bottom: 15px;
       a {
         color: $white;
         text-decoration: none;
@@ -300,6 +320,9 @@ margin-top: 20px;
           content: '\00a0 \00a0 | \00a0 \00a0';
         }
       }
+    }
+    .col-sm-10 {
+      padding-left: 50px;
     }
   }
 }

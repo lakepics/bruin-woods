@@ -165,7 +165,7 @@ if( have_rows('flex_content') ):
                                         echo '<div class="row"><div class="col-sm-12 family-holidays__notice"><p>'.$notice.'</p></div></div>';
                                         }
                                     if ( !empty($program_charts_url) ) {
-                                        echo '<div class="row prog-charts"><div class="col-sm-12"><a class="button button--blue" target="_blank" href="'.$program_charts_url.'">Download Program Chart &nbsp; <span class="fa fa-download" aria-hidden="true"></span></a></div></div>';
+                                        echo '<div class="row prog-charts"><div class="col-sm-12"><a class="button button--blue" target="_blank" href="'.$program_charts_url.'">Activity Schedule &nbsp; <span class="fa fa-download" aria-hidden="true"></span></a></div></div>';
                                     }
                         echo '
                         </div>
@@ -198,7 +198,7 @@ if( have_rows('flex_content') ):
                                         echo '<div class="row"><div class="col-sm-12 family-holidays__notice">'.$notice.'</div></div>';
                                         }
                                     if ( !empty($program_charts_url) ) {
-                                        echo '<div class="row prog-charts"><div class="col-sm-12 text-right"><a class="button button--blue" target="_blank" href="'.$program_charts_url.'">Download Program Chart &nbsp; <span class="fa fa-download" aria-hidden="true"></span></a></div></div>';
+                                        echo '<div class="row prog-charts"><div class="col-sm-12 text-right"><a class="button button--blue" target="_blank" href="'.$program_charts_url.'">Activity Schedule &nbsp; <span class="fa fa-download" aria-hidden="true"></span></a></div></div>';
                                     }
             }
 

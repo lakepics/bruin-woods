@@ -44,7 +44,7 @@
                     </div>
                     <div class="mobile-footer__contact__register">
                     <a href="http://bruinwoods-dev.hhs.ucla.edu/summer-family-camp/apply/" target="_blank ">
-                    <div class="icon-wrapper"><span class="icon-text">register</span><i class="fa fa-users custom-icon-center"><span class="fix-editor">&nbsp;</span></i></div>
+                    <div class="icon-wrapper"><span class="icon-text">apply</span><i class="fa fa-users custom-icon-center"><span class="fix-editor">&nbsp;</span></i></div>
                     </div>
                     </a>
                     <div class="mobile-footer__contact__call">
